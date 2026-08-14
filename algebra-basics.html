@@ -56,7 +56,7 @@
 <p id="score"></p>
 
 <script>
-const questions = [
+const allQuestions = [
   {
     question: "If x + 5 = 12, what is x?",
     answers: [7, 5, 17],
@@ -81,8 +81,64 @@ const questions = [
     question: "If 2x = 14, what is x?",
     answers: [7, 12, 28],
     correct: 7
+  },
+  {
+    question: "If x + 8 = 15, what is x?",
+    answers: [7, 8, 23],
+    correct: 7
+  },
+  {
+    question: "What is the coefficient of x in 6x + 2?",
+    answers: [2, 6, "x"],
+    correct: 6
+  },
+  {
+    question: "If x - 7 = 5, what is x?",
+    answers: [2, 12, 35],
+    correct: 12
+  },
+  {
+    question: "Simplify: 3x + 2x",
+    answers: ["5x", "6x", "5"],
+    correct: "5x"
+  },
+  {
+    question: "If 3x = 21, what is x?",
+    answers: [6, 7, 24],
+    correct: 7
+  },
+  {
+    question: "What is the constant in 9x - 4?",
+    answers: [9, -4, "x"],
+    correct: -4
+  },
+  {
+    question: "Simplify: 8x - 3x",
+    answers: ["5x", "11x", "5"],
+    correct: "5x"
+  },
+  {
+    question: "If x + 10 = 18, what is x?",
+    answers: [8, 10, 28],
+    correct: 8
+  },
+  {
+    question: "What is the coefficient of x in 4x + 9?",
+    answers: [4, 9, "x"],
+    correct: 4
+  },
+  {
+    question: "If 5x = 30, what is x?",
+    answers: [5, 6, 35],
+    correct: 6
   }
 ];
+function createQuiz() {
+  questions = [...allQuestions]
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 5);
+}
+let questions = [];
 
 let currentQuestion = 0;
 let points = 0;
@@ -178,16 +234,19 @@ document.getElementById("progressBar").style.width = "100%";
   const retryButton = document.createElement("button");
 
   retryButton.innerText = "🔄 Try Again";
-
+ 
   retryButton.onclick = function() {
-    currentQuestion = 0;
-    points = 0;
-    showQuestion();
-  };
+  currentQuestion = 0;
+  points = 0;
+  createQuiz();
+  showQuestion();
+};
+  
 
   document.getElementById("answers").appendChild(retryButton);
 }
 
+createQuiz();
 showQuestion();
 </script>
   
