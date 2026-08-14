@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,284 +9,438 @@
 </head>
 
 <body>
-<h1>📚 Algebra Basics</h1>
+
+  <h1>📚 Algebra Basics</h1>
 
   <h2>What is Algebra?</h2>
+
   <p>
     Algebra is a branch of mathematics where letters and symbols
     are used to represent numbers.
   </p>
 
   <h2>🔤 Variables</h2>
+
   <p>
     A variable is a letter that represents an unknown value.
   </p>
 
   <p><b>Example:</b> x + 5 = 12</p>
+
   <p>Here, <b>x</b> is the variable.</p>
 
   <h2>🔢 Constants</h2>
+
   <p>
     A constant is a fixed number.
   </p>
 
   <p><b>Example:</b> 3x + 7</p>
+
   <p>Here, <b>7</b> is the constant.</p>
 
-  <h2>✏️ Try This</h2>
-  <p>Solve: <b>x + 4 = 10</b></p>
-
-  <details>
-    <summary>Show Answer</summary>
-    <p><b>x = 6</b></p>
-  </details>
+  <hr>
 
   <h2>🧠 Algebra Basics Quiz</h2>
-<div id="difficulty">
-  <button onclick="startQuiz('easy')">🟢 Easy</button>
-  <button onclick="startQuiz('medium')">🟡 Medium</button>
-  <button onclick="startQuiz('hard')">🔴 Hard</button>
-</div>
-<p id="question"></p>
-<p id="progress"></p>
 
-<div style="background:#ddd; border-radius:10px; width:100%; height:12px;">
-  <div id="progressBar"
-       style="background:#182848; height:12px; width:0%; border-radius:10px;">
+  <p>Choose a difficulty:</p>
+
+  <div id="difficulty">
+
+    <button onclick="startQuiz('easy')">
+      🟢 Easy
+    </button>
+
+    <button onclick="startQuiz('medium')">
+      🟡 Medium
+    </button>
+
+    <button onclick="startQuiz('hard')">
+      🔴 Hard
+    </button>
+
   </div>
-</div>
-<div id="answers"></div>
 
-<p id="result"></p>
-<p id="score"></p>
+  <br>
+
+  <p id="progress"></p>
+
+  <div style="background:#ddd; border-radius:10px; width:100%; height:12px;">
+
+    <div id="progressBar"
+      style="background:#182848; height:12px; width:0%; border-radius:10px;">
+    </div>
+
+  </div>
+
+  <br>
+
+  <p id="question"></p>
+
+  <div id="answers"></div>
+
+  <p id="result"></p>
+
+  <p id="score"></p>
+
+  <br>
+
+  <a href="algebra.html">⬅️ Back to Algebra</a>
+
 
 <script>
+
 const allQuestions = [
+
+  /* EASY */
+
   {
     question: "If x + 5 = 12, what is x?",
     answers: [7, 5, 17],
-    correct: 7
-    difficulty:"easy"
+    correct: 7,
+    difficulty: "easy"
   },
+
   {
     question: "What is the variable in 3x + 4?",
     answers: ["3", "x", "4"],
-    correct: "x"
-    difficulty:"easy"
+    correct: "x",
+    difficulty: "easy"
   },
+
   {
     question: "What is the constant in 5x + 8?",
     answers: [5, "x", 8],
-    correct: 8
-    difficulty:"easy"
+    correct: 8,
+    difficulty: "easy"
   },
+
   {
     question: "If x - 3 = 10, what is x?",
     answers: [7, 13, 30],
-    correct: 13
-    difficulty:"easy"
+    correct: 13,
+    difficulty: "easy"
   },
+
   {
     question: "If 2x = 14, what is x?",
     answers: [7, 12, 28],
-    correct: 7
-    difficulty:"easy"
+    correct: 7,
+    difficulty: "easy"
   },
+
+
+  /* MEDIUM */
+
   {
     question: "If x + 8 = 15, what is x?",
     answers: [7, 8, 23],
-    correct: 7
-    difficulty:"medium"
+    correct: 7,
+    difficulty: "medium"
   },
+
   {
     question: "What is the coefficient of x in 6x + 2?",
     answers: [2, 6, "x"],
-    correct: 6
-    difficulty:"medium "
+    correct: 6,
+    difficulty: "medium"
   },
+
   {
     question: "If x - 7 = 5, what is x?",
     answers: [2, 12, 35],
-    correct: 12
-    difficulty:"medium"
+    correct: 12,
+    difficulty: "medium"
   },
+
   {
     question: "Simplify: 3x + 2x",
     answers: ["5x", "6x", "5"],
-    correct: "5x"
-    difficulty:"medium"
+    correct: "5x",
+    difficulty: "medium"
   },
+
   {
     question: "If 3x = 21, what is x?",
     answers: [6, 7, 24],
-    correct: 7
-    difficulty:"medium"
+    correct: 7,
+    difficulty: "medium"
   },
+
+
+  /* HARD */
+
   {
     question: "What is the constant in 9x - 4?",
     answers: [9, -4, "x"],
-    correct: -4
-    difficulty:"hard"
+    correct: -4,
+    difficulty: "hard"
   },
+
   {
     question: "Simplify: 8x - 3x",
     answers: ["5x", "11x", "5"],
-    correct: "5x"
-    difficulty:"hard"
+    correct: "5x",
+    difficulty: "hard"
   },
+
   {
     question: "If x + 10 = 18, what is x?",
     answers: [8, 10, 28],
-    correct: 8
-    difficulty:"hard"
+    correct: 8,
+    difficulty: "hard"
   },
+
   {
     question: "What is the coefficient of x in 4x + 9?",
     answers: [4, 9, "x"],
-    correct: 4
-    difficulty:"hard"
+    correct: 4,
+    difficulty: "hard"
   },
+
   {
     question: "If 5x = 30, what is x?",
     answers: [5, 6, 35],
-    correct: 6
-    difficulty:"hard"
+    correct: 6,
+    difficulty: "hard"
   }
-  function createQuiz(difficulty) {
-  const filteredQuestions = allQuestions.filter(
-    q => q.difficulty === difficulty
-  );
-    function startQuiz(difficulty) {
-  selectedDifficulty = difficulty;
 
-  currentQuestion = 0;
-  points = 0;
+];
 
-  createQuiz(difficulty);
-  showQuestion();
-    }
-
-  questions = [...filteredQuestions]
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 5);
-      }
 
 let questions = [];
 
 let currentQuestion = 0;
+
 let points = 0;
+
 let selectedDifficulty = "easy";
+
+
+function createQuiz(difficulty) {
+
+  const filteredQuestions = allQuestions.filter(
+    q => q.difficulty === difficulty
+  );
+
+  questions = [...filteredQuestions]
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 5);
+
+}
+
+
+function startQuiz(difficulty) {
+
+  selectedDifficulty = difficulty;
+
+  currentQuestion = 0;
+
+  points = 0;
+
+  document.getElementById("difficulty").style.display = "none";
+
+  createQuiz(difficulty);
+
+  showQuestion();
+
+}
+
+
 function showQuestion() {
+
   const q = questions[currentQuestion];
-const progress = Math.round(
-  (currentQuestion / questions.length) * 100
-);
 
-document.getElementById("progress").innerHTML =
-  "Question " + (currentQuestion + 1) +
-  " / " + questions.length;
+  const progress = Math.round(
+    (currentQuestion / questions.length) * 100
+  );
 
-document.getElementById("progressBar").style.width =
-  progress + "%";
+  document.getElementById("progress").innerHTML =
+    "Question " +
+    (currentQuestion + 1) +
+    " / " +
+    questions.length;
+
+  document.getElementById("progressBar").style.width =
+    progress + "%";
+
+
   document.getElementById("question").innerHTML =
-    "<b>Question " + (currentQuestion + 1) + ":</b> " + q.question;
+    "<b>Question " +
+    (currentQuestion + 1) +
+    ":</b> " +
+    q.question;
+
 
   document.getElementById("answers").innerHTML = "";
+
   document.getElementById("result").innerHTML = "";
+
   document.getElementById("score").innerHTML = "";
 
+
   q.answers.forEach(answer => {
+
     const button = document.createElement("button");
 
     button.innerText = answer;
 
     button.onclick = function() {
+
       checkAnswer(answer);
+
     };
 
-    document.getElementById("answers").appendChild(button);
+    document.getElementById("answers")
+      .appendChild(button);
+
   });
+
 }
 
+
 function checkAnswer(answer) {
+
   const q = questions[currentQuestion];
 
+
   if (answer === q.correct) {
+
     points++;
+
     document.getElementById("result").innerHTML =
       "✅ Correct! Great job!";
-  } else {
-    document.getElementById("result").innerHTML =
-      "❌ Wrong! Correct answer: " + q.correct;
+
   }
 
+  else {
+
+    document.getElementById("result").innerHTML =
+      "❌ Wrong! Correct answer: " +
+      q.correct;
+
+  }
+
+
   currentQuestion++;
+
 
   setTimeout(() => {
 
     if (currentQuestion < questions.length) {
+
       showQuestion();
 
-    } else {
+    }
+
+    else {
+
       showFinalScore();
+
     }
 
   }, 1000);
+
 }
 
+
 function showFinalScore() {
-  document.getElementById("progress").innerHTML = "";
-document.getElementById("progressBar").style.width = "100%";
+
   const total = questions.length;
-  const percentage = Math.round((points / total) * 100);
+
+  const percentage =
+    Math.round((points / total) * 100);
+
 
   document.getElementById("question").innerHTML =
     "🎉 Quiz Complete!";
 
+
   document.getElementById("answers").innerHTML = "";
+
+
+  document.getElementById("progress").innerHTML =
+    "Completed!";
+
+
+  document.getElementById("progressBar").style.width =
+    "100%";
+
 
   let message = "";
 
+
   if (percentage === 100) {
-    message = "🏆 Perfect score! Amazing!";
-  } else if (percentage >= 80) {
-    message = "🔥 Excellent work!";
-  } else if (percentage >= 60) {
-    message = "👍 Good job! Keep practicing!";
-  } else {
-    message = "💪 Keep practicing! You can do better!";
+
+    message =
+      "🏆 Perfect score! Amazing!";
+
   }
+
+  else if (percentage >= 80) {
+
+    message =
+      "🔥 Excellent work!";
+
+  }
+
+  else if (percentage >= 60) {
+
+    message =
+      "👍 Good job! Keep practicing!";
+
+  }
+
+  else {
+
+    message =
+      "💪 Keep practicing! You can do better!";
+
+  }
+
 
   document.getElementById("result").innerHTML =
     message;
 
+
   document.getElementById("score").innerHTML =
-    "<b>📊 Score: " + points + " / " + total +
-    " (" + percentage + "%)</b>";
+    "<b>📊 Score: " +
+    points +
+    " / " +
+    total +
+    " (" +
+    percentage +
+    "%)</b>";
 
-  const retryButton = document.createElement("button");
 
-  retryButton.innerText = "🔄 Try Again";
- 
+  const retryButton =
+    document.createElement("button");
+
+
+  retryButton.innerText =
+    "🔄 Try Again";
+
+
   retryButton.onclick = function() {
-  currentQuestion = 0;
-  points = 0;
 
-  createQuiz(selectedDifficulty);
-  showQuestion();
-};
-  
+    currentQuestion = 0;
 
-  document.getElementById("answers").appendChild(retryButton);
+    points = 0;
+
+    createQuiz(selectedDifficulty);
+
+    showQuestion();
+
+  };
+
+
+  document.getElementById("answers")
+    .appendChild(retryButton);
+
 }
 
-createQuiz();
-showQuestion();
 </script>
-  
-    
-
-  <a href="algebra.html">⬅️ Back to Algebra</a>
 
 </body>
+
 </html>
