@@ -41,7 +41,11 @@
   </details>
 
   <h2>🧠 Algebra Basics Quiz</h2>
-
+<div id="difficulty">
+  <button onclick="startQuiz('easy')">🟢 Easy</button>
+  <button onclick="startQuiz('medium')">🟡 Medium</button>
+  <button onclick="startQuiz('hard')">🔴 Hard</button>
+</div>
 <p id="question"></p>
 <p id="progress"></p>
 
@@ -61,88 +65,116 @@ const allQuestions = [
     question: "If x + 5 = 12, what is x?",
     answers: [7, 5, 17],
     correct: 7
+    difficulty:"easy"
   },
   {
     question: "What is the variable in 3x + 4?",
     answers: ["3", "x", "4"],
     correct: "x"
+    difficulty:"easy"
   },
   {
     question: "What is the constant in 5x + 8?",
     answers: [5, "x", 8],
     correct: 8
+    difficulty:"easy"
   },
   {
     question: "If x - 3 = 10, what is x?",
     answers: [7, 13, 30],
     correct: 13
+    difficulty:"easy"
   },
   {
     question: "If 2x = 14, what is x?",
     answers: [7, 12, 28],
     correct: 7
+    difficulty:"easy"
   },
   {
     question: "If x + 8 = 15, what is x?",
     answers: [7, 8, 23],
     correct: 7
+    difficulty:"medium"
   },
   {
     question: "What is the coefficient of x in 6x + 2?",
     answers: [2, 6, "x"],
     correct: 6
+    difficulty:"medium "
   },
   {
     question: "If x - 7 = 5, what is x?",
     answers: [2, 12, 35],
     correct: 12
+    difficulty:"medium"
   },
   {
     question: "Simplify: 3x + 2x",
     answers: ["5x", "6x", "5"],
     correct: "5x"
+    difficulty:"medium"
   },
   {
     question: "If 3x = 21, what is x?",
     answers: [6, 7, 24],
     correct: 7
+    difficulty:"medium"
   },
   {
     question: "What is the constant in 9x - 4?",
     answers: [9, -4, "x"],
     correct: -4
+    difficulty:"hard"
   },
   {
     question: "Simplify: 8x - 3x",
     answers: ["5x", "11x", "5"],
     correct: "5x"
+    difficulty:"hard"
   },
   {
     question: "If x + 10 = 18, what is x?",
     answers: [8, 10, 28],
     correct: 8
+    difficulty:"hard"
   },
   {
     question: "What is the coefficient of x in 4x + 9?",
     answers: [4, 9, "x"],
     correct: 4
+    difficulty:"hard"
   },
   {
     question: "If 5x = 30, what is x?",
     answers: [5, 6, 35],
     correct: 6
+    difficulty:"hard"
   }
-];
-function createQuiz() {
-  questions = [...allQuestions]
+  function createQuiz(difficulty) {
+  const filteredQuestions = allQuestions.filter(
+    q => q.difficulty === difficulty
+  );
+    function startQuiz(difficulty) {
+  selectedDifficulty = difficulty;
+
+  currentQuestion = 0;
+  points = 0;
+
+  createQuiz(difficulty);
+  showQuestion();
+    }
+
+  questions = [...filteredQuestions]
     .sort(() => Math.random() - 0.5)
     .slice(0, 5);
-}
+      }
+
 let questions = [];
 
 let currentQuestion = 0;
 let points = 0;
-
+let selectedDifficulty = "easy";
 function showQuestion() {
   const q = questions[currentQuestion];
 const progress = Math.round(
@@ -238,7 +270,8 @@ document.getElementById("progressBar").style.width = "100%";
   retryButton.onclick = function() {
   currentQuestion = 0;
   points = 0;
-  createQuiz();
+
+  createQuiz(selectedDifficulty);
   showQuestion();
 };
   
