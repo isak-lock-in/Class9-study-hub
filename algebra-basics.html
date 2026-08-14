@@ -89,7 +89,16 @@ let points = 0;
 
 function showQuestion() {
   const q = questions[currentQuestion];
+const progress = Math.round(
+  ((currentQuestion + 1) / questions.length) * 100
+);
 
+document.getElementById("progress").innerHTML =
+  "Question " + (currentQuestion + 1) +
+  " / " + questions.length;
+
+document.getElementById("progressBar").style.width =
+  progress + "%";
   document.getElementById("question").innerHTML =
     "<b>Question " + (currentQuestion + 1) + ":</b> " + q.question;
 
@@ -137,6 +146,8 @@ function checkAnswer(answer) {
 }
 
 function showFinalScore() {
+  document.getElementById("progress").innerHTML = "";
+document.getElementById("progressBar").style.width = "100%";
   const total = questions.length;
   const percentage = Math.round((points / total) * 100);
 
