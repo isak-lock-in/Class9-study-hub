@@ -1,37 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
     background: #f4f7fb;
+    color: #182848;
+}
+
+.home {
+    max-width: 700px;
+    margin: auto;
+    padding: 35px 20px;
     text-align: center;
-    margin: 0;
-    padding: 40px 20px;
+}
+
+.hero {
+    padding: 25px 10px 35px;
+}
+
+.logo {
+    font-size: 55px;
+    margin-bottom: 10px;
 }
 
 h1 {
-    color: #182848;
-    font-size: 36px;
+    font-size: 42px;
+    line-height: 1.1;
+    margin: 0;
 }
 
-p {
-    color: #555;
-    font-size: 18px;
+.hero p {
+    font-size: 19px;
+    color: #666;
+    margin-top: 15px;
 }
 
 h2 {
+    font-size: 25px;
+    margin: 20px 0;
+}
+
+.subject-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.subject-card {
+    background: white;
+    padding: 25px 12px;
+    border-radius: 18px;
+    text-decoration: none;
     color: #182848;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s;
+}
+
+.subject-card:hover {
+    transform: translateY(-4px);
+}
+
+.subject-card span {
+    display: block;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.subject-card strong {
+    display: block;
+    font-size: 20px;
+}
+
+.subject-card small {
+    display: block;
+    margin-top: 6px;
+    color: #777;
+}
+
+.footer {
     margin-top: 40px;
+    color: #888;
+    font-size: 14px;
 }
 
-button {
-    background: #182848;
-    color: white;
-    border: none;
-    padding: 14px 22px;
-    margin: 8px;
-    border-radius: 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
 
-button:hover {
-    opacity: 0.85;
-  }
+@media (max-width: 450px) {
+
+    h1 {
+        font-size: 36px;
+    }
+
+    .subject-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
