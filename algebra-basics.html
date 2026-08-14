@@ -43,7 +43,7 @@
 
   <h2>🧠 Algebra Basics Quiz</h2>
 
-  <p>Choose a difficulty:</p>
+  <p id="difficultyText">Choose a difficulty:</p>
 
   <div id="difficulty">
 
@@ -239,6 +239,7 @@ function startQuiz(difficulty) {
   points = 0;
 
   document.getElementById("difficulty").style.display = "none";
+document.getElementById("difficultyText").style.display = "none";
 
   createQuiz(difficulty);
 
