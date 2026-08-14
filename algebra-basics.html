@@ -424,15 +424,20 @@ function showFinalScore() {
 
   retryButton.onclick = function() {
 
-    currentQuestion = 0;
+  currentQuestion = 0;
+  points = 0;
 
-    points = 0;
+  document.getElementById("question").innerHTML = "";
+  document.getElementById("answers").innerHTML = "";
+  document.getElementById("result").innerHTML = "";
+  document.getElementById("score").innerHTML = "";
+  document.getElementById("progress").innerHTML = "";
+  document.getElementById("progressBar").style.width = "0%";
 
-    createQuiz(selectedDifficulty);
+  document.getElementById("difficulty").style.display = "block";
+  document.getElementById("difficultyText").style.display = "block";
 
-    showQuestion();
-
-  };
+};
 
 
   document.getElementById("answers")
