@@ -39,7 +39,8 @@
     <summary>Show Answer</summary>
     <p><b>x = 6</b></p>
   </details>
-<h2>🧠 Algebra Basics Quiz</h2>
+
+  <h2>🧠 Algebra Basics Quiz</h2>
 
 <p id="question"></p>
 
@@ -87,9 +88,12 @@ function showQuestion() {
     "<b>Question " + (currentQuestion + 1) + ":</b> " + q.question;
 
   document.getElementById("answers").innerHTML = "";
+  document.getElementById("result").innerHTML = "";
+  document.getElementById("score").innerHTML = "";
 
   q.answers.forEach(answer => {
     const button = document.createElement("button");
+
     button.innerText = answer;
 
     button.onclick = function() {
@@ -98,8 +102,6 @@ function showQuestion() {
 
     document.getElementById("answers").appendChild(button);
   });
-
-  document.getElementById("result").innerHTML = "";
 }
 
 function checkAnswer(answer) {
@@ -107,30 +109,70 @@ function checkAnswer(answer) {
 
   if (answer === q.correct) {
     points++;
-    document.getElementById("result").innerHTML = "✅ Correct!";
+    document.getElementById("result").innerHTML =
+      "✅ Correct! Great job!";
   } else {
     document.getElementById("result").innerHTML =
-      "❌ Wrong! The correct answer is " + q.correct;
+      "❌ Wrong! Correct answer: " + q.correct;
   }
 
   currentQuestion++;
 
   setTimeout(() => {
+
     if (currentQuestion < questions.length) {
       showQuestion();
+
     } else {
-      document.getElementById("question").innerHTML =
-        "🎉 Quiz Complete!";
-      document.getElementById("answers").innerHTML = "";
-      document.getElementById("result").innerHTML =
-        "You scored " + points + " / " + questions.length;
+      showFinalScore();
     }
+
   }, 1000);
 }
 
+function showFinalScore() {
+  const total = questions.length;
+  const percentage = Math.round((points / total) * 100);
+
+  document.getElementById("question").innerHTML =
+    "🎉 Quiz Complete!";
+
+  document.getElementById("answers").innerHTML = "";
+
+  let message = "";
+
+  if (percentage === 100) {
+    message = "🏆 Perfect score! Amazing!";
+  } else if (percentage >= 80) {
+    message = "🔥 Excellent work!";
+  } else if (percentage >= 60) {
+    message = "👍 Good job! Keep practicing!";
+  } else {
+    message = "💪 Keep practicing! You can do better!";
+  }
+
+  document.getElementById("result").innerHTML =
+    message;
+
+  document.getElementById("score").innerHTML =
+    "<b>📊 Score: " + points + " / " + total +
+    " (" + percentage + "%)</b>";
+
+  const retryButton = document.createElement("button");
+
+  retryButton.innerText = "🔄 Try Again";
+
+  retryButton.onclick = function() {
+    currentQuestion = 0;
+    points = 0;
+    showQuestion();
+  };
+
+  document.getElementById("answers").appendChild(retryButton);
+}
+
 showQuestion();
-  </script>
-  
+</script>
   
     
 
