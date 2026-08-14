@@ -40,7 +40,97 @@
     <summary>Show Answer</summary>
     <p><b>x = 6</b></p>
   </details>
-<h2>🧠 Quick Quiz</h2>
+<h2>🧠 Algebra Basics Quiz</h2>
+
+<p id="question"></p>
+
+<div id="answers"></div>
+
+<p id="result"></p>
+<p id="score"></p>
+
+<script>
+const questions = [
+  {
+    question: "If x + 5 = 12, what is x?",
+    answers: [7, 5, 17],
+    correct: 7
+  },
+  {
+    question: "What is the variable in 3x + 4?",
+    answers: ["3", "x", "4"],
+    correct: "x"
+  },
+  {
+    question: "What is the constant in 5x + 8?",
+    answers: [5, "x", 8],
+    correct: 8
+  },
+  {
+    question: "If x - 3 = 10, what is x?",
+    answers: [7, 13, 30],
+    correct: 13
+  },
+  {
+    question: "If 2x = 14, what is x?",
+    answers: [7, 12, 28],
+    correct: 7
+  }
+];
+
+let currentQuestion = 0;
+let points = 0;
+
+function showQuestion() {
+  const q = questions[currentQuestion];
+
+  document.getElementById("question").innerHTML =
+    "<b>Question " + (currentQuestion + 1) + ":</b> " + q.question;
+
+  document.getElementById("answers").innerHTML = "";
+
+  q.answers.forEach(answer => {
+    const button = document.createElement("button");
+    button.innerText = answer;
+
+    button.onclick = function() {
+      checkAnswer(answer);
+    };
+
+    document.getElementById("answers").appendChild(button);
+  });
+
+  document.getElementById("result").innerHTML = "";
+}
+
+function checkAnswer(answer) {
+  const q = questions[currentQuestion];
+
+  if (answer === q.correct) {
+    points++;
+    document.getElementById("result").innerHTML = "✅ Correct!";
+  } else {
+    document.getElementById("result").innerHTML =
+      "❌ Wrong! The correct answer is " + q.correct;
+  }
+
+  currentQuestion++;
+
+  setTimeout(() => {
+    if (currentQuestion < questions.length) {
+      showQuestion();
+    } else {
+      document.getElementById("question").innerHTML =
+        "🎉 Quiz Complete!";
+      document.getElementById("answers").innerHTML = "";
+      document.getElementById("result").innerHTML =
+        "You scored " + points + " / " + questions.length;
+    }
+  }, 1000);
+}
+
+showQuestion();
+              </script>
 
 <p><b>Question 1:</b> If x + 5 = 12, what is x?</p>
 
