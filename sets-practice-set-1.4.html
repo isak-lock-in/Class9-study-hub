@@ -504,4 +504,214 @@
             <br><br>
 
             A ∪ B contains every element appearing
-           
+            in either set.
+
+            <br><br>
+
+            A ∪ B =
+            {1,2,3,4,5,6,8,10}
+
+            <br><br>
+
+            Notice that 7 and 9 are not in the union.
+
+            <br><br>
+
+            Therefore:
+
+            <strong>
+            (A ∪ B)<sup>c</sup> = {7,9}
+            </strong>
+
+            <br><br>
+
+            So the number of elements is:
+
+            <strong>2</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- SCORE -->
+
+    <div class="score-box" id="scoreBox">
+
+        <h2>🏆 Practice Set Complete!</h2>
+
+        <p id="scoreText"></p>
+
+        <p>
+            🎉 You've completed all four Sets practice sets!
+        </p>
+
+    </div>
+
+
+    <a
+        class="back"
+        href="sets-practice.html"
+    >
+        ⬅️ Back to Practice Sets
+    </a>
+
+</div>
+
+
+<script>
+
+let attempts = [0, 0, 0, 0, 0];
+
+let completed = [false, false, false, false, false];
+
+let score = 0;
+
+
+function normalize(answer) {
+
+    return answer
+        .toLowerCase()
+        .replace(/\s/g, "")
+        .replace(/;/g, ",");
+}
+
+
+function checkAnswer(question, correctAnswer) {
+
+    const input =
+        document.getElementById("a" + question);
+
+    const result =
+        document.getElementById("r" + question);
+
+    const retry =
+        document.getElementById("retry" + question);
+
+    const solution =
+        document.getElementById("s" + question);
+
+
+    if (completed[question - 1]) {
+        return;
+    }
+
+
+    const answer =
+        normalize(input.value);
+
+    const correct =
+        normalize(correctAnswer);
+
+
+    if (answer === "") {
+
+        result.innerHTML =
+            "⚠️ Please enter an answer first.";
+
+        result.style.color = "#a05a00";
+
+        return;
+    }
+
+
+    attempts[question - 1]++;
+
+
+    /* CORRECT */
+
+    if (answer === correct) {
+
+        result.innerHTML =
+            "✅ Correct! Excellent work 🔥";
+
+        result.style.color = "green";
+
+        solution.style.display = "block";
+
+        completed[question - 1] = true;
+
+        score++;
+
+        checkComplete();
+
+        return;
+    }
+
+
+    /* WRONG WITH RETRIES LEFT */
+
+    if (attempts[question - 1] < 3) {
+
+        const remaining =
+            3 - attempts[question - 1];
+
+        result.innerHTML =
+            "❌ Not quite. Try again!";
+
+        result.style.color = "red";
+
+        retry.innerHTML =
+            "🔄 " +
+            remaining +
+            " retry" +
+            (remaining === 1 ? "" : "ies") +
+            " remaining.";
+
+        return;
+    }
+
+
+    /* NO RETRIES */
+
+    result.innerHTML =
+        "❌ No more retries.";
+
+    result.style.color = "red";
+
+    retry.innerHTML =
+        "💡 The step-by-step solution is shown below.";
+
+    solution.style.display = "block";
+
+    completed[question - 1] = true;
+
+    checkComplete();
+}
+
+
+function checkComplete() {
+
+    if (completed.every(Boolean)) {
+
+        const scoreBox =
+            document.getElementById("scoreBox");
+
+        const scoreText =
+            document.getElementById("scoreText");
+
+
+        scoreBox.style.display = "block";
+
+
+        scoreText.innerHTML =
+            "You scored <strong>" +
+            score +
+            " / 5</strong>.";
+
+
+        setTimeout(function() {
+
+            scoreBox.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        }, 200);
+    }
+}
+
+</script>
+
+</body>
+    </html>
