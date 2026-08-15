@@ -1,0 +1,495 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Sets - Practice Set 1.2</title>  <link rel="stylesheet" href="style.css">  <style>
+    body {
+      padding: 20px;
+    }
+
+    .question {
+      margin: 25px 0;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+    }
+
+    .question input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .question button {
+      padding: 9px 14px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .feedback {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .solution,
+    .hint {
+      display: none;
+      margin-top: 12px;
+      padding: 12px;
+    }
+
+    .solution {
+      border-left: 4px solid #555;
+    }
+
+    .score-box {
+      margin: 30px 0;
+      padding: 20px;
+      border-radius: 12px;
+      background: #eef3ff;
+      text-align: center;
+    }
+  </style></head><body>  <h1>📝 Practice Set 1.2</h1>  <p><b>Chapter 1: Sets</b></p>  <p>
+    Original practice questions on types of sets, equal sets,
+    subsets and set relationships.
+  </p>  <!-- QUESTION 1 -->  <div class="question"><h2>🟢 Question 1 — Easy</h2>
+
+<p>
+  Is the following set finite or infinite?
+</p>
+
+<p>
+  A = {2, 4, 6, 8, 10}
+</p>
+
+<input
+  type="text"
+  id="answer1"
+  placeholder="Type finite or infinite"
+>
+
+<br>
+
+<button onclick="checkAnswer(1)">
+  ✅ Check Answer
+</button>
+
+<button onclick="showHint(1)">
+  💡 Hint
+</button>
+
+<button onclick="showSolution(1)">
+  👀 Show Solution
+</button>
+
+<p id="feedback1" class="feedback"></p>
+
+<p id="hint1" class="hint">
+  Count how many elements are written in the set.
+</p>
+
+<div id="solution1" class="solution">
+
+  <b>Step 1:</b> The elements are 2, 4, 6, 8 and 10.
+
+  <br><br>
+
+  <b>Step 2:</b> There are only five elements.
+
+  <br><br>
+
+  <b>Answer:</b> Finite set.
+
+</div>
+
+  </div>  <!-- QUESTION 2 -->  <div class="question"><h2>🟢 Question 2 — Easy → Medium</h2>
+
+<p>
+  Are the following two sets equal?
+</p>
+
+<p>
+  A = {3, 6, 9}
+</p>
+
+<p>
+  B = {9, 3, 6}
+</p>
+
+<input
+  type="text"
+  id="answer2"
+  placeholder="Type Yes or No"
+>
+
+<br>
+
+<button onclick="checkAnswer(2)">
+  ✅ Check Answer
+</button>
+
+<button onclick="showHint(2)">
+  💡 Hint
+</button>
+
+<button onclick="showSolution(2)">
+  👀 Show Solution
+</button>
+
+<p id="feedback2" class="feedback"></p>
+
+<p id="hint2" class="hint">
+  Does the order of elements matter in a set?
+</p>
+
+<div id="solution2" class="solution">
+
+  <b>Step 1:</b> Compare the elements.
+
+  <br><br>
+
+  A contains 3, 6 and 9.
+
+  <br><br>
+
+  B also contains 3, 6 and 9.
+
+  <br><br>
+
+  <b>Step 2:</b> The order does not matter.
+
+  <br><br>
+
+  <b>Answer:</b> Yes, A = B.
+
+</div>
+
+  </div>  <!-- QUESTION 3 -->  <div class="question"><h2>🟡 Question 3 — Medium</h2>
+
+<p>
+  Let A = {1, 2, 3, 4, 5}.
+</p>
+
+<p>
+  Is {2, 4} a subset of A?
+  Type <b>Yes</b> or <b>No</b>.
+</p>
+
+<input
+  type="text"
+  id="answer3"
+  placeholder="Type Yes or No"
+>
+
+<br>
+
+<button onclick="checkAnswer(3)">
+  ✅ Check Answer
+</button>
+
+<button onclick="showHint(3)">
+  💡 Hint
+</button>
+
+<button onclick="showSolution(3)">
+  👀 Show Solution
+</button>
+
+<p id="feedback3" class="feedback"></p>
+
+<p id="hint3" class="hint">
+  Check whether every element of {2,4} appears in A.
+</p>
+
+<div id="solution3" class="solution">
+
+  <b>Step 1:</b> The smaller set contains 2 and 4.
+
+  <br><br>
+
+  <b>Step 2:</b> Both 2 and 4 are elements of A.
+
+  <br><br>
+
+  <b>Answer:</b> Yes.
+
+  <br><br>
+
+  Therefore, {2,4} ⊆ A.
+
+</div>
+
+  </div>  <!-- QUESTION 4 -->  <div class="question"><h2>🟠 Question 4 — Hard</h2>
+
+<p>
+  Let:
+</p>
+
+<p>
+  U = {1, 2, 3, 4, 5, 6, 7, 8}
+</p>
+
+<p>
+  A = {2, 4, 6, 8}
+</p>
+
+<p>
+  Write the complement of A.
+</p>
+
+<input
+  type="text"
+  id="answer4"
+  placeholder="Enter the elements of A′"
+>
+
+<br>
+
+<button onclick="checkAnswer(4)">
+  ✅ Check Answer
+</button>
+
+<button onclick="showHint(4)">
+  💡 Hint
+</button>
+
+<button onclick="showSolution(4)">
+  👀 Show Solution
+</button>
+
+<p id="feedback4" class="feedback"></p>
+
+<p id="hint4" class="hint">
+  Find the elements in U that are NOT in A.
+</p>
+
+<div id="solution4" class="solution">
+
+  <b>Step 1:</b> Start with the universal set:
+
+  <br><br>
+
+  {1, 2, 3, 4, 5, 6, 7, 8}
+
+  <br><br>
+
+  <b>Step 2:</b> Remove the elements of A:
+
+  <br><br>
+
+  2, 4, 6, 8
+
+  <br><br>
+
+  <b>Answer:</b>
+
+  A′ = {1, 3, 5, 7}
+
+</div>
+
+  </div>  <!-- QUESTION 5 -->  <div class="question"><h2>🔴 Question 5 — Hardest</h2>
+
+<p>
+  Let:
+</p>
+
+<p>
+  U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+</p>
+
+<p>
+  A = {2, 4, 6, 8, 10}
+</p>
+
+<p>
+  B = {1, 2, 3, 4, 5}
+</p>
+
+<p>
+  Find the elements common to both A and B.
+</p>
+
+<input
+  type="text"
+  id="answer5"
+  placeholder="Enter the common elements"
+>
+
+<br>
+
+<button onclick="checkAnswer(5)">
+  ✅ Check Answer
+</button>
+
+<button onclick="showHint(5)">
+  💡 Hint
+</button>
+
+<button onclick="showSolution(5)">
+  👀 Show Solution
+</button>
+
+<p id="feedback5" class="feedback"></p>
+
+<p id="hint5" class="hint">
+  Look for numbers that appear in BOTH A and B.
+</p>
+
+<div id="solution5" class="solution">
+
+  <b>Step 1:</b> List A:
+
+  <br><br>
+
+  {2, 4, 6, 8, 10}
+
+  <br><br>
+
+  <b>Step 2:</b> List B:
+
+  <br><br>
+
+  {1, 2, 3, 4, 5}
+
+  <br><br>
+
+  <b>Step 3:</b> Find the elements appearing in both.
+
+  <br><br>
+
+  2 and 4 appear in both sets.
+
+  <br><br>
+
+  <b>Answer:</b>
+
+  A ∩ B = {2, 4}
+
+</div>
+
+  </div>  <!-- SCORE -->  <div class="score-box"><h2>🏆 Your Score</h2>
+
+<p id="score">0 / 5</p>
+
+  </div>  <br>  <a href="sets-practice.html">
+    ⬅️ Back to Practice Sets
+  </a><br><br>
+
+  <a href="sets.html">
+    📚 Back to Sets
+  </a>  <script>
+
+    let score = 0;
+
+    let answered = {
+      1: false,
+      2: false,
+      3: false,
+      4: false,
+      5: false
+    };
+
+
+    function cleanAnswer(answer) {
+
+      return answer
+        .toLowerCase()
+        .replace(/\s/g, "")
+        .replace(/[{}]/g, "");
+
+    }
+
+
+    function checkAnswer(question) {
+
+      const input =
+        document.getElementById("answer" + question);
+
+      const feedback =
+        document.getElementById("feedback" + question);
+
+      const answer =
+        cleanAnswer(input.value);
+
+      let correct = false;
+
+
+      if (question === 1) {
+        correct = answer === "finite";
+      }
+
+
+      if (question === 2) {
+        correct =
+          answer === "yes" ||
+          answer === "yes,a=b";
+      }
+
+
+      if (question === 3) {
+        correct = answer === "yes";
+      }
+
+
+      if (question === 4) {
+        correct =
+          answer === "1,3,5,7";
+      }
+
+
+      if (question === 5) {
+        correct =
+          answer === "2,4";
+      }
+
+
+      if (correct) {
+
+        feedback.innerHTML =
+          "✅ Correct! Excellent work 🔥";
+
+        if (!answered[question]) {
+
+          score++;
+
+          answered[question] = true;
+
+          updateScore();
+
+        }
+
+      } else {
+
+        feedback.innerHTML =
+          "❌ Not quite. Try again or use the hint.";
+
+      }
+
+    }
+
+
+    function updateScore() {
+
+      document.getElementById("score").innerHTML =
+        score + " / 5";
+
+    }
+
+
+    function showHint(question) {
+
+      document.getElementById("hint" + question)
+        .style.display = "block";
+
+    }
+
+
+    function showSolution(question) {
+
+      document.getElementById("solution" + question)
+        .style.display = "block";
+
+    }
+
+  </script></body>
+  </html>
