@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sets - Practice Set 1.1</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    .question {
+      margin: 25px 0;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+    }
+
+    .question input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .question button {
+      padding: 9px 14px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .feedback {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .solution {
+      display: none;
+      margin-top: 12px;
+      padding: 12px;
+      border-left: 4px solid #555;
+    }
+
+    .hint {
+      display: none;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    .score-box {
+      margin: 30px 0;
+      padding: 20px;
+      border-radius: 12px;
+      background: #eef3ff;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>📝 Practice Set 1.1</h1>
+
+  <p>
+    <b>Chapter 1: Sets</b>
+  </p>
+
+  <p>
+    Original practice questions based on the concepts of set
+    representation and notation.
+  </p>
+
+
+  <!-- QUESTION 1 -->
+
+  <div class="question">
+
+    <h2>Question 1</h2>
+
+    <p>
+      Write the set of positive even integers less than 15
+      in roster form.
+    </p>
+
+    <input
+      type="text"
+      id="answer1"
+      placeholder="Example: {1,2,3}"
+    >
+
+    <br>
+
+    <button onclick="checkAnswer(1)">
+      ✅ Check Answer
+    </button>
+
+    <button onclick="showHint(1)">
+      💡 Hint
+    </button>
+
+    <button onclick="showSolution(1)">
+      👀 Show Solution
+    </button>
+
+    <p id="feedback1" class="feedback"></p>
+
+    <p id="hint1" class="hint">
+      Start with 2 and keep adding 2 until you reach a number
+      below 15.
+    </p>
+
+    <div id="solution1" class="solution">
+
+      <b>Step 1:</b> List the positive even integers.
+
+      <br><br>
+
+      2, 4, 6, 8, 10, 12, 14
+
+      <br><br>
+
+      <b>Step 2:</b> All of them are less than 15.
+
+      <br><br>
+
+      <b>Answer:</b>
+      {2, 4, 6, 8, 10, 12, 14}
+
+    </div>
+
+  </div>
+
+
+  <!-- QUESTION 2 -->
+
+  <div class="question">
+
+    <h2>Question 2</h2>
+
+    <p>
+      Write the set of vowels in the English alphabet
+      using roster notation.
+    </p>
+
+    <input
+      type="text"
+      id="answer2"
+      placeholder="Enter your set"
+    >
+
+    <br>
+
+    <button onclick="checkAnswer(2)">
+      ✅ Check Answer
+    </button>
+
+    <button onclick="showHint(2)">
+      💡 Hint
+    </button>
+
+    <button onclick="showSolution(2)">
+      👀 Show Solution
+    </button>
+
+    <p id="feedback2" class="feedback"></p>
+
+    <p id="hint2" class="hint">
+      Think of the five basic vowel letters.
+    </p>
+
+    <div id="solution2" class="solution">
+
+      <b>Step 1:</b> Identify the vowels.
+
+      <br><br>
+
+      a, e, i, o, u
+
+      <br><br>
+
+      <b>Step 2:</b> Put them inside curly brackets.
+
+      <br><br>
+
+      <b>Answer:</b>
+      {a, e, i, o, u}
+
+    </div>
+
+  </div>
+
+
+  <!-- QUESTION 3 -->
+
+  <div class="question">
+
+    <h2>Question 3</h2>
+
+    <p>
+      Write the following set in roster form:
+    </p>
+
+    <p>
+      A = {x | x is a natural number greater than 3
+      and less than 9}
+    </p>
+
+    <input
+      type="text"
+      id="answer3"
+      placeholder="Enter the roster form"
+    >
+
+    <br>
+
+    <button onclick="checkAnswer(3)">
+      ✅ Check Answer
+    </button>
+
+    <button onclick="showHint(3)">
+      💡 Hint
+    </button>
+
+    <button onclick="showSolution(3)">
+      👀 Show Solution
+    </button>
+
+    <p id="feedback3" class="feedback"></p>
+
+    <p id="hint3" class="hint">
+      Find the natural numbers between 3 and 9, not including
+      3 or 9.
+    </p>
+
+    <div id="solution3" class="solution">
+
+      <b>Step 1:</b> Natural numbers greater than 3 are:
+
+      <br><br>
+
+      4, 5, 6, 7, 8, ...
+
+      <br><br>
+
+      <b>Step 2:</b> Keep only numbers less than 9.
+
+      <br><br>
+
+      <b>Answer:</b>
+      {4, 5, 6, 7, 8}
+
+    </div>
+
+  </div>
+
+
+  <!-- QUESTION 4 -->
+
+  <div class="question">
+
+    <h2>Question 4</h2>
+
+    <p>
+      Write the following set in set-builder form:
+    </p>
+
+    <p>
+      B = {5, 10, 15, 20, 25}
+    </p>
+
+    <input
+      type="text"
+      id="answer4"
+      placeholder="Describe the rule"
+    >
+
+    <br>
+
+    <button onclick="checkAnswer(4)">
+      ✅ Check Answer
+    </button>
+
+    <button onclick="showHint(4)">
+      💡 Hint
+    </button>
+
+    <button onclick="showSolution(4)">
+      👀 Show Solution
+    </button>
+
+    <p id="feedback4" class="feedback"></p>
+
+    <p id="hint4" class="hint">
+      Look for a common pattern between consecutive numbers.
+    </p>
+
+    <div id="solution4" class="solution">
+
+      <b>Step 1:</b> Notice that every element is a multiple of 5.
+
+      <br><br>
+
+      <b>Step 2:</b> The multiples are limited to 5 through 25.
+
+      <br><br>
+
+      <b>Answer:</b>
+
+      B = {x | x is a multiple of 5 and 5 ≤ x ≤ 25}
+
+    </div>
+
+  </div>
+
+
+  <!-- QUESTION 5 -->
+
+  <div class="question">
+
+    <h2>Question 5</h2>
+
+    <p>
+      Decide whether the following statement is true or false:
+    </p>
+
+    <p>
+      {2, 4, 6} = {6, 4, 2}
+    </p>
+
+    <input
+      type="text"
+      id="answer5"
+      placeholder="Type True or False"
+    >
+
+    <br>
+
+    <button onclick="checkAnswer(5)">
+      ✅ Check Answer
+    </button>
+
+    <button onclick="showHint(5)">
+      💡 Hint
+    </button>
+
+    <button onclick="showSolution(5)">
+      👀 Show Solution
+    </button>
+
+    <p id="feedback5" class="feedback"></p>
+
+    <p id="hint5" class="hint">
+      Does the order of elements matter in a set?
+    </p>
+
+    <div id="solution5" class="solution">
+
+      <b>Step 1:</b> Compare the elements.
+
+      <br><br>
+
+      Both sets contain 2, 4 and 6.
+
+      <br><br>
+
+      <b>Step 2:</b> The order of elements does not affect equality.
+
+      <br><br>
+
+      <b>Answer:</b> True
+
+    </div>
+
+  </div>
+
+
+  <!-- SCORE -->
+
+  <div class="score-box">
+
+    <h2>🏆 Your Score</h2>
+
+    <p id="score">
+      0 / 5
+    </p>
+
+  </div>
+
+
+  <br>
+
+  <a href="sets-practice.html">
+    ⬅️ Back to Practice Sets
+  </a>
+
+  <br><br>
+
+  <a href="sets.html">
+    📚 Back to Sets
+  </a>
+
+
+  <script>
+
+    let score = 0;
+
+    let answered = {
+      1: false,
+      2: false,
+      3: false,
+      4: false,
+      5: false
+    };
+
+
+    function cleanAnswer(answer) {
+
+      return answer
+        .toLowerCase()
+        .replace(/\s/g, "")
+        .replace(/[{}]/g, "")
+        .replace(/,/g, ",")
+        .replace(/′/g, "'");
+
+    }
+
+
+    function checkAnswer(question) {
+
+      let input = document.getElementById("answer" + question);
+
+      let feedback = document.getElementById("feedback" + question);
+
+      let userAnswer = cleanAnswer(input.value);
+
+      let correct = false;
+
+
+      if (question === 1) {
+
+        correct =
+          userAnswer === "2,4,6,8,10,12,14";
+
+      }
+
+
+      if (question === 2) {
+
+        correct =
+          userAnswer === "a,e,i,o,u";
+
+      }
+
+
+      if (question === 3) {
+
+        correct =
+          userAnswer === "4,5,6,7,8";
+
+      }
+
+
+      if (question === 4) {
+
+        correct =
+          userAnswer.includes("multipleof5") &&
+          userAnswer.includes("5") &&
+          userAnswer.includes("25");
+
+      }
+
+
+      if (question === 5) {
+
+        correct =
+          userAnswer === "true";
+
+      }
+
+
+      if (correct) {
+
+        feedback.innerHTML = "✅ Correct! Great work 🔥";
+
+        if (!answered[question]) {
+
+          score++;
+
+          answered[question] = true;
+
+          updateScore();
+
+        }
+
+      } else {
+
+        feedback.innerHTML =
+          "❌ Not quite. Try again or use the hint.";
+
+      }
+
+    }
+
+
+    function updateScore() {
+
+      document.getElementById("score").innerHTML =
+        score + " / 5";
+
+    }
+
+
+    function showHint(question) {
+
+      document.getElementById("hint" + question).style.display =
+        "block";
+
+    }
+
+
+    function showSolution(question) {
+
+      document.getElementById("solution" + question).style.display =
+        "block";
+
+    }
+
+  </script>
+
+</body>
+      </html>
