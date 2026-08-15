@@ -1,7 +1,14 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>Sets - Practice Set 1.2</title>  <link rel="stylesheet" href="style.css">  <style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sets - Practice Set 1.2</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
     body {
       padding: 20px;
     }
@@ -49,337 +56,343 @@
       background: #eef3ff;
       text-align: center;
     }
-  </style></head><body>  <h1>📝 Practice Set 1.2</h1>  <p><b>Chapter 1: Sets</b></p>  <p>
-    Original practice questions on types of sets, equal sets,
-    subsets and set relationships.
-  </p>  <!-- QUESTION 1 -->  <div class="question"><h2>🟢 Question 1 — Easy</h2>
+  </style>
+</head>
 
-<p>
-  Is the following set finite or infinite?
-</p>
+<body>
 
-<p>
-  A = {2, 4, 6, 8, 10}
-</p>
+  <h1>📝 Practice Set 1.2</h1>
 
-<input
-  type="text"
-  id="answer1"
-  placeholder="Type finite or infinite"
->
+  <p><b>Chapter 1: Sets</b></p>
 
-<br>
+  <p>
+    Original practice questions on types of sets,
+    equal sets, subsets and set relationships.
+  </p>
 
-<button onclick="checkAnswer(1)">
-  ✅ Check Answer
-</button>
 
-<button onclick="showHint(1)">
-  💡 Hint
-</button>
+  <!-- QUESTION 1 -->
 
-<button onclick="showSolution(1)">
-  👀 Show Solution
-</button>
+  <div class="question">
 
-<p id="feedback1" class="feedback"></p>
+    <h2>🟢 Question 1 — Easy</h2>
 
-<p id="hint1" class="hint">
-  Count how many elements are written in the set.
-</p>
+    <p>
+      Is the following set finite or infinite?
+    </p>
 
-<div id="solution1" class="solution">
+    <p>
+      A = {2, 4, 6, 8, 10}
+    </p>
 
-  <b>Step 1:</b> The elements are 2, 4, 6, 8 and 10.
+    <input id="answer1" type="text"
+      placeholder="Type finite or infinite">
 
-  <br><br>
+    <br>
 
-  <b>Step 2:</b> There are only five elements.
+    <button onclick="checkAnswer(1)">✅ Check Answer</button>
+    <button onclick="showHint(1)">💡 Hint</button>
+    <button onclick="showSolution(1)">👀 Show Solution</button>
 
-  <br><br>
+    <p id="feedback1" class="feedback"></p>
 
-  <b>Answer:</b> Finite set.
+    <p id="hint1" class="hint">
+      Count how many elements are written in the set.
+    </p>
 
-</div>
+    <div id="solution1" class="solution">
 
-  </div>  <!-- QUESTION 2 -->  <div class="question"><h2>🟢 Question 2 — Easy → Medium</h2>
+      <b>Step 1:</b> The set contains:
 
-<p>
-  Are the following two sets equal?
-</p>
+      <br><br>
 
-<p>
-  A = {3, 6, 9}
-</p>
+      2, 4, 6, 8 and 10.
 
-<p>
-  B = {9, 3, 6}
-</p>
+      <br><br>
 
-<input
-  type="text"
-  id="answer2"
-  placeholder="Type Yes or No"
->
+      <b>Step 2:</b> There are only five elements.
 
-<br>
+      <br><br>
 
-<button onclick="checkAnswer(2)">
-  ✅ Check Answer
-</button>
+      <b>Answer:</b> Finite set.
 
-<button onclick="showHint(2)">
-  💡 Hint
-</button>
+    </div>
 
-<button onclick="showSolution(2)">
-  👀 Show Solution
-</button>
+  </div>
 
-<p id="feedback2" class="feedback"></p>
 
-<p id="hint2" class="hint">
-  Does the order of elements matter in a set?
-</p>
+  <!-- QUESTION 2 -->
 
-<div id="solution2" class="solution">
+  <div class="question">
 
-  <b>Step 1:</b> Compare the elements.
+    <h2>🟢 Question 2 — Easy → Medium</h2>
 
-  <br><br>
+    <p>
+      Are the following two sets equal?
+    </p>
 
-  A contains 3, 6 and 9.
+    <p>
+      A = {3, 6, 9}
+    </p>
 
-  <br><br>
+    <p>
+      B = {9, 3, 6}
+    </p>
 
-  B also contains 3, 6 and 9.
+    <input id="answer2" type="text"
+      placeholder="Type Yes or No">
 
-  <br><br>
+    <br>
 
-  <b>Step 2:</b> The order does not matter.
+    <button onclick="checkAnswer(2)">✅ Check Answer</button>
+    <button onclick="showHint(2)">💡 Hint</button>
+    <button onclick="showSolution(2)">👀 Show Solution</button>
 
-  <br><br>
+    <p id="feedback2" class="feedback"></p>
 
-  <b>Answer:</b> Yes, A = B.
+    <p id="hint2" class="hint">
+      Does the order of elements matter in a set?
+    </p>
 
-</div>
+    <div id="solution2" class="solution">
 
-  </div>  <!-- QUESTION 3 -->  <div class="question"><h2>🟡 Question 3 — Medium</h2>
+      <b>Step 1:</b> A contains 3, 6 and 9.
 
-<p>
-  Let A = {1, 2, 3, 4, 5}.
-</p>
+      <br><br>
 
-<p>
-  Is {2, 4} a subset of A?
-  Type <b>Yes</b> or <b>No</b>.
-</p>
+      <b>Step 2:</b> B also contains 3, 6 and 9.
 
-<input
-  type="text"
-  id="answer3"
-  placeholder="Type Yes or No"
->
+      <br><br>
 
-<br>
+      <b>Step 3:</b> The order does not matter.
 
-<button onclick="checkAnswer(3)">
-  ✅ Check Answer
-</button>
+      <br><br>
 
-<button onclick="showHint(3)">
-  💡 Hint
-</button>
+      <b>Answer:</b> Yes, A = B.
 
-<button onclick="showSolution(3)">
-  👀 Show Solution
-</button>
+    </div>
 
-<p id="feedback3" class="feedback"></p>
+  </div>
 
-<p id="hint3" class="hint">
-  Check whether every element of {2,4} appears in A.
-</p>
 
-<div id="solution3" class="solution">
+  <!-- QUESTION 3 -->
 
-  <b>Step 1:</b> The smaller set contains 2 and 4.
+  <div class="question">
 
-  <br><br>
+    <h2>🟡 Question 3 — Medium</h2>
 
-  <b>Step 2:</b> Both 2 and 4 are elements of A.
+    <p>
+      Let A = {1, 2, 3, 4, 5}.
+    </p>
 
-  <br><br>
+    <p>
+      Is {2, 4} a subset of A?
+      Type <b>Yes</b> or <b>No</b>.
+    </p>
 
-  <b>Answer:</b> Yes.
+    <input id="answer3" type="text"
+      placeholder="Type Yes or No">
 
-  <br><br>
+    <br>
 
-  Therefore, {2,4} ⊆ A.
+    <button onclick="checkAnswer(3)">✅ Check Answer</button>
+    <button onclick="showHint(3)">💡 Hint</button>
+    <button onclick="showSolution(3)">👀 Show Solution</button>
 
-</div>
+    <p id="feedback3" class="feedback"></p>
 
-  </div>  <!-- QUESTION 4 -->  <div class="question"><h2>🟠 Question 4 — Hard</h2>
+    <p id="hint3" class="hint">
+      Check whether every element of {2,4} appears in A.
+    </p>
 
-<p>
-  Let:
-</p>
+    <div id="solution3" class="solution">
 
-<p>
-  U = {1, 2, 3, 4, 5, 6, 7, 8}
-</p>
+      <b>Step 1:</b> The smaller set contains 2 and 4.
 
-<p>
-  A = {2, 4, 6, 8}
-</p>
+      <br><br>
 
-<p>
-  Write the complement of A.
-</p>
+      <b>Step 2:</b> Both 2 and 4 are elements of A.
 
-<input
-  type="text"
-  id="answer4"
-  placeholder="Enter the elements of A′"
->
+      <br><br>
 
-<br>
+      <b>Answer:</b> Yes.
 
-<button onclick="checkAnswer(4)">
-  ✅ Check Answer
-</button>
+      <br><br>
 
-<button onclick="showHint(4)">
-  💡 Hint
-</button>
+      Therefore:
 
-<button onclick="showSolution(4)">
-  👀 Show Solution
-</button>
+      {2,4} ⊆ A
 
-<p id="feedback4" class="feedback"></p>
+    </div>
 
-<p id="hint4" class="hint">
-  Find the elements in U that are NOT in A.
-</p>
+  </div>
 
-<div id="solution4" class="solution">
 
-  <b>Step 1:</b> Start with the universal set:
+  <!-- QUESTION 4 -->
 
-  <br><br>
+  <div class="question">
 
-  {1, 2, 3, 4, 5, 6, 7, 8}
+    <h2>🟠 Question 4 — Hard</h2>
 
-  <br><br>
+    <p>
+      Let:
+    </p>
 
-  <b>Step 2:</b> Remove the elements of A:
+    <p>
+      U = {1, 2, 3, 4, 5, 6, 7, 8}
+    </p>
 
-  <br><br>
+    <p>
+      A = {2, 4, 6, 8}
+    </p>
 
-  2, 4, 6, 8
+    <p>
+      Write the complement of A.
+    </p>
 
-  <br><br>
+    <input id="answer4" type="text"
+      placeholder="Enter the elements of A′">
 
-  <b>Answer:</b>
+    <br>
 
-  A′ = {1, 3, 5, 7}
+    <button onclick="checkAnswer(4)">✅ Check Answer</button>
+    <button onclick="showHint(4)">💡 Hint</button>
+    <button onclick="showSolution(4)">👀 Show Solution</button>
 
-</div>
+    <p id="feedback4" class="feedback"></p>
 
-  </div>  <!-- QUESTION 5 -->  <div class="question"><h2>🔴 Question 5 — Hardest</h2>
+    <p id="hint4" class="hint">
+      Find the elements in U that are NOT in A.
+    </p>
 
-<p>
-  Let:
-</p>
+    <div id="solution4" class="solution">
 
-<p>
-  U = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-</p>
+      <b>Step 1:</b> Start with U:
 
-<p>
-  A = {2, 4, 6, 8, 10}
-</p>
+      <br><br>
 
-<p>
-  B = {1, 2, 3, 4, 5}
-</p>
+      {1, 2, 3, 4, 5, 6, 7, 8}
 
-<p>
-  Find the elements common to both A and B.
-</p>
+      <br><br>
 
-<input
-  type="text"
-  id="answer5"
-  placeholder="Enter the common elements"
->
+      <b>Step 2:</b> Remove 2, 4, 6 and 8.
 
-<br>
+      <br><br>
 
-<button onclick="checkAnswer(5)">
-  ✅ Check Answer
-</button>
+      <b>Answer:</b>
 
-<button onclick="showHint(5)">
-  💡 Hint
-</button>
+      A′ = {1, 3, 5, 7}
 
-<button onclick="showSolution(5)">
-  👀 Show Solution
-</button>
+    </div>
 
-<p id="feedback5" class="feedback"></p>
+  </div>
 
-<p id="hint5" class="hint">
-  Look for numbers that appear in BOTH A and B.
-</p>
 
-<div id="solution5" class="solution">
+  <!-- QUESTION 5 -->
 
-  <b>Step 1:</b> List A:
+  <div class="question">
 
-  <br><br>
+    <h2>🔴 Question 5 — Hardest</h2>
 
-  {2, 4, 6, 8, 10}
+    <p>
+      Let:
+    </p>
 
-  <br><br>
+    <p>
+      A = {2, 4, 6, 8, 10}
+    </p>
 
-  <b>Step 2:</b> List B:
+    <p>
+      B = {1, 2, 3, 4, 5}
+    </p>
 
-  <br><br>
+    <p>
+      Find the elements common to both A and B.
+    </p>
 
-  {1, 2, 3, 4, 5}
+    <input id="answer5" type="text"
+      placeholder="Enter the common elements">
 
-  <br><br>
+    <br>
 
-  <b>Step 3:</b> Find the elements appearing in both.
+    <button onclick="checkAnswer(5)">✅ Check Answer</button>
+    <button onclick="showHint(5)">💡 Hint</button>
+    <button onclick="showSolution(5)">👀 Show Solution</button>
 
-  <br><br>
+    <p id="feedback5" class="feedback"></p>
 
-  2 and 4 appear in both sets.
+    <p id="hint5" class="hint">
+      Look for numbers that appear in BOTH A and B.
+    </p>
 
-  <br><br>
+    <div id="solution5" class="solution">
 
-  <b>Answer:</b>
+      <b>Step 1:</b> Look at A:
 
-  A ∩ B = {2, 4}
+      <br><br>
 
-</div>
+      {2, 4, 6, 8, 10}
 
-  </div>  <!-- SCORE -->  <div class="score-box"><h2>🏆 Your Score</h2>
+      <br><br>
 
-<p id="score">0 / 5</p>
+      <b>Step 2:</b> Look at B:
 
-  </div>  <br>  <a href="sets-practice.html">
+      <br><br>
+
+      {1, 2, 3, 4, 5}
+
+      <br><br>
+
+      <b>Step 3:</b> The common elements are 2 and 4.
+
+      <br><br>
+
+      <b>Answer:</b>
+
+      A ∩ B = {2, 4}
+
+    </div>
+
+  </div>
+
+
+  <!-- SCORE -->
+
+  <div class="score-box">
+
+    <h2>🏆 Your Score</h2>
+
+    <p id="score">0 / 5</p>
+
+  </div>
+
+
+  <br>
+
+  <a href="sets-practice.html">
     ⬅️ Back to Practice Sets
-  </a><br><br>
+  </a>
+
+  <br><br>
 
   <a href="sets.html">
     📚 Back to Sets
-  </a>  <script>
+  </a>
+
+
+  <script>
 
     let score = 0;
+
+    const MAX_RETRIES = 2;
+
+    let attempts = {
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0
+    };
 
     let answered = {
       1: false,
@@ -401,6 +414,10 @@
 
 
     function checkAnswer(question) {
+
+      if (answered[question] || attempts[question] >= 3) {
+        return;
+      }
 
       const input =
         document.getElementById("answer" + question);
@@ -432,15 +449,16 @@
 
 
       if (question === 4) {
-        correct =
-          answer === "1,3,5,7";
+        correct = answer === "1,3,5,7";
       }
 
 
       if (question === 5) {
-        correct =
-          answer === "2,4";
+        correct = answer === "2,4";
       }
+
+
+      attempts[question]++;
 
 
       if (correct) {
@@ -458,10 +476,31 @@
 
         }
 
+        input.disabled = true;
+
+        return;
+      }
+
+
+      const retriesLeft =
+        3 - attempts[question];
+
+
+      if (retriesLeft > 0) {
+
+        feedback.innerHTML =
+          "❌ Not quite. You have " +
+          retriesLeft +
+          (retriesLeft === 1
+            ? " retry left."
+            : " retries left.");
+
       } else {
 
         feedback.innerHTML =
-          "❌ Not quite. Try again or use the hint.";
+          "🔒 No retries left. This question is locked.";
+
+        input.disabled = true;
 
       }
 
@@ -491,5 +530,7 @@
 
     }
 
-  </script></body>
-  </html>
+  </script>
+
+</body>
+                   </html>
