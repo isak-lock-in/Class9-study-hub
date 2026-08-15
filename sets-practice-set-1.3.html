@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sets - Practice Set 1.3</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        background: #f4f7fc;
+        color: #172b4d;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 34px;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        font-size: 25px;
+        margin-top: 30px;
+    }
+
+    .subtitle {
+        color: #555;
+        margin-bottom: 25px;
+    }
+
+    .question {
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0 2px 7px rgba(0,0,0,0.08);
+    }
+
+    .difficulty {
+        font-size: 13px;
+        color: #777;
+        margin-bottom: 8px;
+    }
+
+    input {
+        width: 90%;
+        max-width: 500px;
+        padding: 12px;
+        font-size: 17px;
+        border: 1px solid #aaa;
+        border-radius: 7px;
+        margin-top: 10px;
+    }
+
+    button {
+        padding: 10px 18px;
+        font-size: 16px;
+        border-radius: 7px;
+        border: 1px solid #777;
+        background: #fff;
+        cursor: pointer;
+        margin-top: 12px;
+    }
+
+    button:hover {
+        background: #eee;
+    }
+
+    .check-btn {
+        background: #172b4d;
+        color: white;
+        border: none;
+    }
+
+    .result {
+        margin-top: 12px;
+        font-weight: bold;
+    }
+
+    .solution {
+        display: none;
+        background: #f0f5ff;
+        border-left: 4px solid #315fbd;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 6px;
+    }
+
+    .retry {
+        color: #a05a00;
+        font-size: 14px;
+    }
+
+    .score-box {
+        display: none;
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        margin-top: 30px;
+        text-align: center;
+        border: 1px solid #ccc;
+    }
+
+    .back {
+        display: inline-block;
+        margin-top: 30px;
+        color: #4d2a91;
+        font-size: 18px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📚 Chapter 1: Sets</h1>
+
+<p class="subtitle">
+Practice Set 1.3 — Challenge yourself with five original Sets questions.
+</p>
+
+<hr>
+
+<!-- QUESTION 1 -->
+
+<div class="question" id="q1">
+
+<div class="difficulty">🟢 Question 1 — Easy</div>
+
+<h2>1. Subsets</h2>
+
+<p>
+Let
+<strong>A = {1, 2, 3}</strong>.
+</p>
+
+<p>
+Which of the following is a subset of A?
+</p>
+
+<p>
+A) {1, 3}<br>
+B) {2, 4}<br>
+C) {1, 5}<br>
+D) {4, 5}
+</p>
+
+<input id="a1" placeholder="Enter A, B, C or D">
+
+<br>
+
+<button class="check-btn" onclick="checkAnswer(1, 'A')">
+Check Answer
+</button>
+
+<div class="result" id="r1"></div>
+
+<div class="retry" id="retry1"></div>
+
+<div class="solution" id="s1">
+
+<strong>Step-by-step:</strong>
+
+<br><br>
+
+A subset can contain only elements that are already present
+in the original set.
+
+<br><br>
+
+A = {1, 2, 3}
+
+<br>
+
+{1, 3} contains only elements of A.
+
+<br><br>
+
+Therefore:
+
+<strong>{1, 3} ⊆ A</strong>
+
+<br><br>
+
+✅ Correct answer: <strong>A</strong>
+
+</div>
+
+</div>
+
+
+<!-- QUESTION 2 -->
+
+<div class="question" id="q2">
+
+<div class="difficulty">🟢 Question 2 — Easy/Medium</div>
+
+<h2>2. Union of Sets</h2>
+
+<p>
+Let
+<strong>A = {2, 4, 6}</strong>
+and
+<strong>B = {4, 6, 8}</strong>.
+</p>
+
+<p>
+Find A ∪ B.
+</p>
+
+<input id="a2" placeholder="Example: {2,4,6,8}">
+
+<br>
+
+<button class="check-btn" onclick="checkAnswer(2, '{2,4,6,8}')">
+Check Answer
+</button>
+
+<div class="result" id="r2"></div>
+
+<div class="retry" id="retry2"></div>
+
+<div class="solution" id="s2">
+
+<strong>Step-by-step:</strong>
+
+<br><br>
+
+The union contains every distinct element from both sets.
+
+<br><br>
+
+A = {2, 4, 6}
+
+<br>
+
+B = {4, 6, 8}
+
+<br><br>
+
+Combine them:
+
+{2, 4, 6, 4, 6, 8}
+
+<br><br>
+
+Remove repeated elements:
+
+<strong>{2, 4, 6, 8}</strong>
+
+<br><br>
+
+✅ Answer: <strong>A ∪ B = {2, 4, 6, 8}</strong>
+
+</div>
+
+</div>
+
+
+<!-- QUESTION 3 -->
+
+<div class="question" id="q3">
+
+<div class="difficulty">🟡 Question 3 — Medium</div>
+
+<h2>3. Intersection</h2>
+
+<p>
+Let
+<strong>P = {1, 3, 5, 7, 9}</strong>
+and
+<strong>Q = {2, 3, 5, 8, 9}</strong>.
+</p>
+
+<p>
+Find P ∩ Q.
+</p>
+
+<input id="a3" placeholder="Example: {3,5,9}">
+
+<br>
+
+<button class="check-btn" onclick="checkAnswer(3, '{3,5,9}')">
+Check Answer
+</button>
+
+<div class="result" id="r3"></div>
+
+<div class="retry" id="retry3"></div>
+
+<div class="solution" id="s3">
+
+<strong>Step-by-step:</strong>
+
+<br><br>
+
+The intersection contains elements that appear
+in <strong>both</strong> sets.
+
+<br><br>
+
+P = {1, 3, 5, 7, 9}
+
+<br>
+
+Q = {2, 3, 5, 8, 9}
+
+<br><br>
+
+Common elements:
+
+<strong>3, 5 and 9</strong>
+
+<br><br>
+
+Therefore:
+
+<strong>P ∩ Q = {3, 5, 9}</strong>
+
+</div>
+
+</div>
+
+
+<!-- QUESTION 4 -->
+
+<div class="question" id="q4">
+
+<div class="difficulty">🟠 Question 4 — Hard</div>
+
+<h2>4. Complement of a Set</h2>
+
+<p>
+The universal set is
+<strong>U = {1,2,3,4,5,6,7,8,9,10}</strong>.
+</p>
+
+<p>
+Let
+<strong>A = {2,4,6,8,10}</strong>.
+</p>
+
+<p>
+Find A<sup>c</sup>, the complement of A.
+</p>
+
+<input id="a4" placeholder="Example: {1,3,5,7,9}">
+
+<br>
+
+<button class="check-btn" onclick="checkAnswer(4, '{1,3,5,7,9}')">
+Check Answer
+</button>
+
+<div class="result" id="r4"></div>
+
+<div class="retry" id="retry4"></div>
+
+<div class="solution" id="s4">
+
+<strong>Step-by-step:</strong>
+
+<br><br>
+
+The complement of A contains all elements
+of the universal set that are <strong>not</strong> in A.
+
+<br><br>
+
+U = {1,2,3,4,5,6,7,8,9,10}
+
+<br>
+
+A = {2,4,6,8,10}
+
+<br><br>
+
+Remove the elements of A from U:
+
+<br>
+
+<strong>{1,3,5,7,9}</strong>
+
+<br><br>
+
+Therefore:
+
+<strong>A<sup>c</sup> = {1,3,5,7,9}</strong>
+
+</div>
+
+</div>
+
+
+<!-- QUESTION 5 -->
+
+<div class="question" id="q5">
+
+<div class="difficulty">🔴 Question 5 — Challenge</div>
+
+<h2>5. Union + Intersection</h2>
+
+<p>
+Let
+</p>
+
+<p>
+<strong>
+A = {1,2,3,4,5}
+</strong>
+</p>
+
+<p>
+and
+</p>
+
+<p>
+<strong>
+B = {4,5,6,7}
+</strong>
+</p>
+
+<p>
+Find the number of elements in
+<strong>A ∪ B</strong>
+and
+<strong>A ∩ B</strong>.
+</p>
+
+<p>
+Write your answer in this format:
+</p>
+
+<p>
+<strong>Union = __, Intersection = __</strong>
+</p>
+
+<input id="a5" placeholder="Example: Union = 7, Intersection = 2">
+
+<br>
+
+<button class="check-btn" onclick="checkAnswer(5, 'union=7,intersection=2')">
+Check Answer
+</button>
+
+<div class="result" id="r5"></div>
+
+<div class="retry" id="retry5"></div>
+
+<div class="solution" id="s5">
+
+<strong>Step-by-step:</strong>
+
+<br><br>
+
+A = {1,2,3,4,5}
+
+<br>
+
+B = {4,5,6,7}
+
+<br><br>
+
+The union contains every distinct element:
+
+<br>
+
+A ∪ B = {1,2,3,4,5,6,7}
+
+<br><br>
+
+So:
+
+<strong>n(A ∪ B) = 7</strong>
+
+<br><br>
+
+The common elements are:
+
+<strong>{4,5}</strong>
+
+<br><br>
+
+Therefore:
+
+<strong>n(A ∩ B) = 2</strong>
+
+<br><br>
+
+✅ Final answer:
+
+<strong>Union = 7, Intersection = 2</strong>
+
+</div>
+
+</div>
+
+
+<div class="score-box" id="scoreBox">
+
+<h2>🎯 Practice Complete!</h2>
+
+<p id="scoreText"></p>
+
+<p>
+Keep practicing — the next set will be even more challenging. 💪
+</p>
+
+</div>
+
+
+<a class="back" href="sets-practice.html">
+⬅️ Back to Practice Sets
+</a>
+
+</div>
+
+
+<script>
+
+let attempts = [0, 0, 0, 0, 0];
+
+let completed = [false, false, false, false, false];
+
+let score = 0;
+
+
+function normalize(answer) {
+
+    return answer
+        .toLowerCase()
+        .replace(/\s/g, "")
+        .replace(/;/g, ",");
+}
+
+
+function checkAnswer(question, correctAnswer) {
+
+    let input = document.getElementById("a" + question);
+
+    let result = document.getElementById("r" + question);
+
+    let retry = document.getElementById("retry" + question);
+
+    let solution = document.getElementById("s" + question);
+
+    if (completed[question - 1]) {
+        return;
+    }
+
+    let answer = normalize(input.value);
+    let correct = normalize(correctAnswer);
+
+    attempts[question - 1]++;
+
+    if (answer === correct) {
+
+        result.innerHTML = "✅ Correct! Great job.";
+
+        result.style.color = "green";
+
+        solution.style.display = "block";
+
+        completed[question - 1] = true;
+
+        score++;
+
+        checkComplete();
+
+    } else {
+
+        if (attempts[question - 1] < 3) {
+
+            result.innerHTML = "❌ Not quite.";
+
+            result.style.color = "red";
+
+            retry.innerHTML =
+                "🔄 Retry available: " +
+                (2 - (attempts[question - 1] - 1)) +
+                " remaining.";
+
+        } else {
+
+            result.innerHTML =
+                "❌ No more retries for this question.";
+
+            result.style.color = "red";
+
+            retry.innerHTML =
+                "💡 Here is the step-by-step solution:";
+
+            solution.style.display = "block";
+
+            completed[question - 1] = true;
+
+            checkComplete();
+        }
+    }
+}
+
+
+function checkComplete() {
+
+    if (completed.every(Boolean)) {
+
+        let scoreBox = document.getElementById("scoreBox");
+
+        let scoreText = document.getElementById("scoreText");
+
+        scoreBox.style.display = "block";
+
+        scoreText.innerHTML =
+            "You scored <strong>" +
+            score +
+            " / 5</strong>.";
+
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth"
+        });
+    }
+}
+
+</script>
+
+</body>
+  </html>
