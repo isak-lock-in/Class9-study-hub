@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Practice Set 2.1 - Real Numbers</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fc;
+            color: #172b4d;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 25px 18px 50px;
+        }
+
+        .top {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .chapter-number {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 5px 0;
+        }
+
+        .description {
+            color: #666;
+            font-size: 17px;
+        }
+
+        .question {
+            background: white;
+            border: 1px solid #d8dce5;
+            border-radius: 14px;
+            padding: 22px;
+            margin: 18px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+        }
+
+        .question h2 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .options {
+            margin-top: 15px;
+        }
+
+        .option {
+            display: block;
+            background: #f7f9fd;
+            border: 1px solid #d9deea;
+            border-radius: 9px;
+            padding: 12px;
+            margin: 8px 0;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background: #eef3ff;
+        }
+
+        input[type="radio"] {
+            margin-right: 9px;
+        }
+
+        button {
+            border: none;
+            border-radius: 9px;
+            padding: 11px 18px;
+            font-size: 15px;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        .check {
+            background: #315fbd;
+            color: white;
+        }
+
+        .retry {
+            background: #555;
+            color: white;
+            display: none;
+        }
+
+        .result {
+            margin-top: 12px;
+            padding: 12px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .correct {
+            background: #e9f8ee;
+            color: #18733a;
+        }
+
+        .wrong {
+            background: #fff0f0;
+            color: #b52b2b;
+        }
+
+        .score-box {
+            background: white;
+            border: 1px solid #d8dce5;
+            border-radius: 14px;
+            padding: 22px;
+            margin-top: 25px;
+            text-align: center;
+            display: none;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+        }
+
+        .score-box h2 {
+            margin-top: 0;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #4d2a91;
+            font-size: 17px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <div class="top">
+
+        <div class="chapter-number">
+            CHAPTER 2
+        </div>
+
+        <h1>Practice Set 2.1</h1>
+
+        <p class="description">
+            Real Numbers — Practice
+        </p>
+
+    </div>
+
+
+    <!-- QUESTION 1 -->
+
+    <div class="question">
+
+        <h2>1. Which of the following is an irrational number?</h2>
+
+        <div class="options">
+
+            <label class="option">
+                <input type="radio" name="q1" value="a">
+                0.75
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q1" value="b">
+                √2
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q1" value="c">
+                -4
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q1" value="d">
+                3/5
+            </label>
+
+        </div>
+
+        <button class="check" onclick="checkAnswer(1, 'b')">
+            Check Answer
+        </button>
+
+        <button class="retry" id="retry1" onclick="retryQuestion(1)">
+            Retry
+        </button>
+
+        <div class="result" id="result1"></div>
+
+    </div>
+
+
+    <!-- QUESTION 2 -->
+
+    <div class="question">
+
+        <h2>2. Which fraction has a terminating decimal expansion?</h2>
+
+        <div class="options">
+
+            <label class="option">
+                <input type="radio" name="q2" value="a">
+                7/12
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q2" value="b">
+                5/18
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q2" value="c">
+                7/20
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q2" value="d">
+                11/15
+            </label>
+
+        </div>
+
+        <button class="check" onclick="checkAnswer(2, 'c')">
+            Check Answer
+        </button>
+
+        <button class="retry" id="retry2" onclick="retryQuestion(2)">
+            Retry
+        </button>
+
+        <div class="result" id="result2"></div>
+
+    </div>
+
+
+    <!-- QUESTION 3 -->
+
+    <div class="question">
+
+        <h2>3. Simplify: √72</h2>
+
+        <div class="options">
+
+            <label class="option">
+                <input type="radio" name="q3" value="a">
+                6√2
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q3" value="b">
+                4√3
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q3" value="c">
+                3√8
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q3" value="d">
+                8√2
+            </label>
+
+        </div>
+
+        <button class="check" onclick="checkAnswer(3, 'a')">
+            Check Answer
+        </button>
+
+        <button class="retry" id="retry3" onclick="retryQuestion(3)">
+            Retry
+        </button>
+
+        <div class="result" id="result3"></div>
+
+    </div>
+
+
+    <!-- QUESTION 4 -->
+
+    <div class="question">
+
+        <h2>4. Which statement is true?</h2>
+
+        <div class="options">
+
+            <label class="option">
+                <input type="radio" name="q4" value="a">
+                Every irrational number is an integer.
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q4" value="b">
+                Every integer is a rational number.
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q4" value="c">
+                Every rational number is irrational.
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q4" value="d">
+                No integer is a real number.
+            </label>
+
+        </div>
+
+        <button class="check" onclick="checkAnswer(4, 'b')">
+            Check Answer
+        </button>
+
+        <button class="retry" id="retry4" onclick="retryQuestion(4)">
+            Retry
+        </button>
+
+        <div class="result" id="result4"></div>
+
+    </div>
+
+
+    <!-- QUESTION 5 -->
+
+    <div class="question">
+
+        <h2>5. What is the value of |−13|?</h2>
+
+        <div class="options">
+
+            <label class="option">
+                <input type="radio" name="q5" value="a">
+                -13
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q5" value="b">
+                0
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q5" value="c">
+                13
+            </label>
+
+            <label class="option">
+                <input type="radio" name="q5" value="d">
+                26
+            </label>
+
+        </div>
+
+        <button class="check" onclick="checkAnswer(5, 'c')">
+            Check Answer
+        </button>
+
+        <button class="retry" id="retry5" onclick="retryQuestion(5)">
+            Retry
+        </button>
+
+        <div class="result" id="result5"></div>
+
+    </div>
+
+
+    <!-- SCORE -->
+
+    <div class="score-box" id="scoreBox">
+
+        <h2>Practice Set Complete 🔥</h2>
+
+        <p id="scoreText"></p>
+
+    </div>
+
+
+    <!-- BACK -->
+
+    <a href="real-numbers.html" class="back">
+        ⬅️ Back to Real Numbers
+    </a>
+
+</div>
+
+
+<script>
+
+    const answered = {};
+    const answers = {
+        1: "b",
+        2: "c",
+        3: "a",
+        4: "b",
+        5: "c"
+    };
+
+    function checkAnswer(question, correctAnswer) {
+
+        const selected =
+            document.querySelector(
+                'input[name="q' + question + '"]:checked'
+            );
+
+        const result =
+            document.getElementById("result" + question);
+
+        const retry =
+            document.getElementById("retry" + question);
+
+        if (!selected) {
+            result.style.display = "block";
+            result.className = "result wrong";
+            result.textContent = "Please select an answer first.";
+            return;
+        }
+
+        if (selected.value === correctAnswer) {
+
+            result.style.display = "block";
+            result.className = "result correct";
+            result.textContent = "Correct! 🔥";
+
+            retry.style.display = "none";
+
+            answered[question] = true;
+
+            disableQuestion(question);
+
+        } else {
+
+            result.style.display = "block";
+            result.className = "result wrong";
+            result.textContent = "Not quite. Try again!";
+
+            retry.style.display = "inline-block";
+        }
+
+        updateScore();
+    }
+
+
+    function retryQuestion(question) {
+
+        const result =
+            document.getElementById("result" + question);
+
+        const retry =
+            document.getElementById("retry" + question);
+
+        result.style.display = "none";
+        retry.style.display = "none";
+
+        const options =
+            document.querySelectorAll(
+                'input[name="q' + question + '"]'
+            );
+
+        options.forEach(function(option) {
+            option.checked = false;
+            option.disabled = false;
+        });
+    }
+
+
+    function disableQuestion(question) {
+
+        const options =
+            document.querySelectorAll(
+                'input[name="q' + question + '"]'
+            );
+
+        options.forEach(function(option) {
+            option.disabled = true;
+        });
+    }
+
+
+    function updateScore() {
+
+        const total = 5;
+        const score = Object.keys(answered).length;
+
+        if (score === total) {
+
+            const scoreBox =
+                document.getElementById("scoreBox");
+
+            const scoreText =
+                document.getElementById("scoreText");
+
+            scoreBox.style.display = "block";
+
+            scoreText.textContent =
+                "You got all 5 questions correct! " +
+                "Score: " + score + "/" + total + " 🔱";
+        }
+    }
+
+</script>
+
+</body>
+              </html>
