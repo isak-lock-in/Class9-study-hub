@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Real Numbers - Practice Set 2.5</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    .question {
+      margin: 25px 0;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 12px;
+    }
+
+    .question input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+
+    .question button {
+      padding: 9px 14px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    .feedback {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .solution,
+    .hint {
+      display: none;
+      margin-top: 12px;
+      padding: 12px;
+    }
+
+    .solution {
+      border-left: 4px solid #555;
+    }
+
+    .score-box {
+      margin: 30px 0;
+      padding: 20px;
+      border-radius: 12px;
+      background: #eef3ff;
+      text-align: center;
+    }
+
+    .attempts {
+      margin-top: 8px;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>📝 Practice Set 2.5</h1>
+
+  <p><b>Chapter 2: Real Numbers</b></p>
+
+  <p>
+    Final practice set on real-number concepts,
+    decimal expansions, surds and rationalisation.
+  </p>
+
+
+  <!-- QUESTION 1 -->
+
+  <div class="question">
+
+    <h2>🟢 Question 1 — Easy</h2>
+
+    <p>
+      State whether the following number is rational or irrational:
+    </p>
+
+    <p>
+      √81
+    </p>
+
+    <input id="answer1" type="text"
+      placeholder="Type Rational or Irrational">
+
+    <br>
+
+    <button onclick="checkAnswer(1)">
+      ✅ Check Answer
+    </button>
+
+    <button onclick="showHint(1)">
+      💡 Hint
+    </button>
+
+    <p id="feedback1" class="feedback"></p>
+
+    <p id="attempts1" class="attempts">
+      Retries available: 2
+    </p>
+
+    <p id="hint1" class="hint">
+      Find √81 first. Can the result be written as p/q?
+    </p>
+
+    <div id="solution1" class="solution">
+
+      <b>Step 1:</b>
+
+      √81 = 9
+
+      <br><br>
+
+      <b>Step 2:</b>
+
+      9 can be written as 9/1.
+
+      <br><br>
+
+      Therefore, 9 is rational.
+
+      <br><br>
+
+      <b>Answer:</b> Rational
+
+    </div>
+
+  </div>
+
+
+  <!-- QUESTION 2 -->
+
+  <div class="question">
+
+    <h2>🟢 Question 2 — Easy → Medium</h2>
+
+    <p>
+      Determine whether the decimal expansion of
+      <b>17/25</b> is terminating or non-terminating recurring.
+    </p>
+
+    <input id="answer2" type="text"
+      placeholder="Type Terminating or Non-terminating recurring">
+
+    <br>
+
+    <button onclick="checkAnswer(2)">
+      ✅ Check Answer
+    </button>
+
+    <button onclick="showHint(2)">
+      💡 Hint
+    </button>
+
+    <p id="feedback2" class="feedback"></p>
+
+    <p id="attempts2" class="attempts">
+      Retries available: 2
+    </p>
+
+    <p id="hint2" class="hint">
+      Factor 25. Remember the rule involving prime factors 2 and 5.
+    </p>
+
+    <div id="solution2" class="solution">
+
+      <b>Step 1:</b>
+
+      25 = 5 × 5
+
+      <br><br>
+
+      <b>Step 2:</b>
+
+      The denominator contains only the prime factor 5.
+
+      <br><br>
+
+      Therefore the decimal expansion terminates.
+
+      <br><br>
+
+      <b>Step 3:</b>
+
+      17/25 = 0.68
+
+      <br><br>
+
+      <b>Answer:</b> Terminating
+
+    </div>
+
+  </div>
+
+
+  <!-- QUESTION 3 -->
+
+  <div class="question">
+
+    <h2>🟡 Question 3 — Medium</h2>
+
+    <p>
+      Simplify:
+    </p>
+
+    <p>
+      √147
+    </p>
+
+    <input id="answer3" type="text"
+      placeholder="Enter your simplified answer">
+
+    <br>
+
+    <button onclick="checkAnswer(3)">
+      ✅ Check Answer
+    </button>
+
+    <button onclick="showHint(3)">
+      💡 Hint
+    </button>
+
+    <p id="feedback3" class="feedback"></p>
+
+    <p id="attempts3" class="attempts">
+      Retries available: 2
+    </p>
+
+    <p id="hint3" class="hint">
+      Look for a perfect-square factor of 147.
+    </p>
+
+    <div id="solution3" class="solution">
+
+      <b>Step 1:</b>
+
+      147 = 49 × 3
+
+      <br><br>
+
+      <b>Step 2:</b>
+
+      √147 = √(49 × 3)
+
+      <br><br>
+
+      = √49 × √3
+
+      <br><br>
+
+      <b>Step 3:</b>
+
+      √49 = 7
+
+      <br><br>
+
+      Therefore:
+
+      <br><br>
+
+      √147 = 7√3
+
+      <br><br>
+
+      <b>Answer:</b> 7√3
+
+    </div>
+
+  </div>
+
+
+  <!-- QUESTION 4 -->
+
+  <div class="question">
+
+    <h2>🟠 Question 4 — Hard</h2>
+
+    <p>
+      Simplify:
+    </p>
+
+    <p>
+      √108 − √48
+    </p>
+
+    <input id="answer4" type="text"
+      placeholder="Enter your simplified answer">
+
+    <br>
+
+    <button onclick="checkAnswer(4)">
+      ✅ Check Answer
+    </button>
+
+    <button onclick="showHint(4)">
+      💡 Hint
+    </button>
+
+    <p id="feedback4" class="feedback"></p>
+
+    <p id="attempts4" class="attempts">
+      Retries available: 2
+    </p>
+
+    <p id="hint4" class="hint">
+      Simplify both surds using √3.
+    </p>
+
+    <div id="solution4" class="solution">
+
+      <b>Step 1:</b> Simplify √108.
+
+      <br><br>
+
+      √108 = √(36 × 3)
+
+      <br>
+
+      = 6√3
+
+      <br><br>
+
+      <b>Step 2:</b> Simplify √48.
+
+      <br><br>
+
+      √48 = √(16 × 3)
+
+      <br>
+
+      = 4√3
+
+      <br><br>
+
+      <b>Step 3:</b>
+
+      6√3 − 4√3 = 2√3
+
+      <br><br>
+
+      <b>Answer:</b> 2√3
+
+    </div>
+
+  </div>
+
+
+  <!-- QUESTION 5 -->
+
+  <div class="question">
+
+    <h2>🔴 Question 5 — Hardest</h2>
+
+    <p>
+      Rationalise the denominator:
+    </p>
+
+    <p>
+      4/√3
+    </p>
+
+    <input id="answer5" type="text"
+      placeholder="Enter your answer">
+
+    <br>
+
+    <button onclick="checkAnswer(5)">
+      ✅ Check Answer
+    </button>
+
+    <button onclick="showHint(5)">
+      💡 Hint
+    </button>
+
+    <p id="feedback5" class="feedback"></p>
+
+    <p id="attempts5" class="attempts">
+      Retries available: 2
+    </p>
+
+    <p id="hint5" class="hint">
+      Multiply the numerator and denominator by √3.
+    </p>
+
+    <div id="solution5" class="solution">
+
+      <b>Step 1:</b>
+
+      4/√3
+
+      <br><br>
+
+      <b>Step 2:</b>
+
+      Multiply by √3/√3.
+
+      <br><br>
+
+      (4/√3) × (√3/√3)
+
+      <br><br>
+
+      <b>Step 3:</b>
+
+      Numerator = 4√3
+
+      <br><br>
+
+      Denominator:
+
+      √3 × √3 = 3
+
+      <br><br>
+
+      Therefore:
+
+      <br><br>
+
+      <b>Answer:</b> 4√3/3
+
+    </div>
+
+  </div>
+
+
+  <!-- SCORE -->
+
+  <div class="score-box">
+
+    <h2>🏆 Your Score</h2>
+
+    <p id="score">0 / 5</p>
+
+  </div>
+
+
+  <br>
+
+  <a href="real-numbers-practice.html">
+    ⬅️ Back to Practice Sets
+  </a>
+
+  <br><br>
+
+  <a href="real-numbers.html">
+    📚 Back to Real Numbers
+  </a>
+
+
+  <script>
+
+    let score = 0;
+
+    const MAX_RETRIES = 2;
+
+    let attempts = {
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0
+    };
+
+    let answered = {
+      1: false,
+      2: false,
+      3: false,
+      4: false,
+      5: false
+    };
+
+
+    function cleanAnswer(answer) {
+
+      return answer
+        .toLowerCase()
+        .replace(/\s/g, "")
+        .replace(/[{}]/g, "")
+        .replace(/−/g, "-");
+
+    }
+
+
+    function checkAnswer(question) {
+
+      if (answered[question]) {
+        return;
+      }
+
+      if (attempts[question] >= 3) {
+        return;
+      }
+
+
+      const input =
+        document.getElementById("answer" + question);
+
+      const feedback =
+        document.getElementById("feedback" + question);
+
+      const attemptsDisplay =
+        document.getElementById("attempts" + question);
+
+      const answer =
+        cleanAnswer(input.value);
+
+      let correct = false;
+
+
+      if (question === 1) {
+
+        correct =
+          answer === "rational";
+
+      }
+
+
+      if (question === 2) {
+
+        correct =
+          answer === "terminating";
+
+      }
+
+
+      if (question === 3) {
+
+        correct =
+          answer === "7√3" ||
+          answer === "7sqrt3";
+
+      }
+
+
+      if (question === 4) {
+
+        correct =
+          answer === "2√3" ||
+          answer === "2sqrt3";
+
+      }
+
+
+      if (question === 5) {
+
+        correct =
+          answer === "4√3/3" ||
+          answer === "4sqrt3/3";
+
+      }
+
+
+      if (correct) {
+
+        feedback.innerHTML =
+          "✅ Correct! Great work 🔥";
+
+        score++;
+
+        answered[question] = true;
+
+        input.disabled = true;
+
+        attemptsDisplay.innerHTML =
+          "✅ Completed";
+
+        showSolution(question);
+
+        updateScore();
+
+        return;
+
+      }
+
+
+      attempts[question]++;
+
+
+      if (attempts[question] === 1) {
+
+        feedback.innerHTML =
+          "❌ Not quite. You have 2 retries left.";
+
+        attemptsDisplay.innerHTML =
+          "Retries available: 2";
+
+      }
+
+      else if (attempts[question] === 2) {
+
+        feedback.innerHTML =
+          "❌ Still incorrect. This is your final retry.";
+
+        attemptsDisplay.innerHTML =
+          "Retries available: 1";
+
+      }
+
+      else {
+
+        feedback.innerHTML =
+          "🔒 No retries left. Check the solution.";
+
+        attemptsDisplay.innerHTML =
+          "❌ Retries exhausted";
+
+        input.disabled = true;
+
+        showSolution(question);
+
+      }
+
+    }
+
+
+    function updateScore() {
+
+      document.getElementById("score").innerHTML =
+        score + " / 5";
+
+    }
+
+
+    function showHint(question) {
+
+      document.getElementById("hint" + question)
+        .style.display = "block";
+
+    }
+
+
+    function showSolution(question) {
+
+      document.getElementById("solution" + question)
+        .style.display = "block";
+
+    }
+
+  </script>
+
+</body>
+      </html>
