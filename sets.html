@@ -1,46 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class 9 Algebra - Sets</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sets - Chapter 1</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fc;
+            color: #172b4d;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 25px 18px 50px;
+        }
+
+        .top {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .chapter-number {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
+
+        h1 {
+            font-size: 38px;
+            margin: 5px 0;
+        }
+
+        .description {
+            color: #666;
+            font-size: 17px;
+        }
+
+        .section {
+            margin-top: 25px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .card {
+            display: block;
+            text-decoration: none;
+            background: white;
+            color: #172b4d;
+            padding: 20px;
+            margin: 14px 0;
+            border-radius: 14px;
+            border: 1px solid #d8dce5;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        }
+
+        .card h2 {
+            margin: 0 0 6px;
+            font-size: 21px;
+        }
+
+        .card p {
+            margin: 0;
+            color: #666;
+        }
+
+        .practice-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .practice {
+            text-decoration: none;
+            text-align: center;
+            background: white;
+            color: #172b4d;
+            padding: 17px 8px;
+            border-radius: 10px;
+            border: 1px solid #d8dce5;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .practice:hover {
+            transform: translateY(-2px);
+            background: #eef3ff;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 35px;
+            text-decoration: none;
+            color: #4d2a91;
+            font-size: 17px;
+        }
+
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .practice-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+    </style>
 </head>
 
 <body>
 
-  <h1>📚 Chapter 1: Sets</h1>
+<div class="container">
 
-  <p>Learn sets step by step.</p>
+    <!-- HEADER -->
 
-  
-<div class="subjects">
+    <div class="top">
 
-  <a href="sets-learn.html">
-    <button>📖 Learn</button>
-  </a>
+        <div class="chapter-number">
+            CHAPTER 1
+        </div>
 
-  <a href="sets-important-points.html">
-    <button>⭐ Important Points</button>
-  </a>
+        <h1>Sets</h1>
 
-  <a href="sets-practice.html">
-    <button>📝 Practice Sets</button>
-  </a>
- 
-  <a href="sets-problem-set-1.html">
-  <button>🧠 Problem Set 1</button>
-  </a>
-    
-   <a href="sets-quiz-1.html">
-  <button>🎯 Free Quiz</button>
-   </a>
+        <p class="description">
+            Learn the concepts, revise the important points,
+            practice your skills, and test your understanding.
+        </p>
+
+    </div>
+
+
+    <!-- LEARN -->
+
+    <div class="section">
+
+        <div class="section-title">
+            📚 Learn
+        </div>
+
+        <a href="sets-learn.html" class="card">
+
+            <h2>📖 Learn Sets</h2>
+
+            <p>
+                Understand sets, types of sets, set notation,
+                operations on sets and important concepts.
+            </p>
+
+        </a>
+
+    </div>
+
+
+    <!-- IMPORTANT POINTS -->
+
+    <div class="section">
+
+        <div class="section-title">
+            ⭐ Important Points
+        </div>
+
+        <a href="sets-important-points.html" class="card">
+
+            <h2>⭐ Important Points</h2>
+
+            <p>
+                Quickly revise important definitions,
+                properties, formulas and key concepts.
+            </p>
+
+        </a>
+
+    </div>
+
+
+    <!-- PRACTICE SETS -->
+
+    <div class="section">
+
+        <div class="section-title">
+            ✏️ Practice Sets
+        </div>
+
+        <div class="practice-list">
+
+            <a href="sets-practice-set-1.1.html"
+               class="practice">
+                Practice<br>1.1
+            </a>
+
+            <a href="sets-practice-set-1.2.html"
+               class="practice">
+                Practice<br>1.2
+            </a>
+
+            <a href="sets-practice-set-1.3.html"
+               class="practice">
+                Practice<br>1.3
+            </a>
+
+            <a href="sets-practice-set-1.4.html"
+               class="practice">
+                Practice<br>1.4
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEM SET -->
+
+    <div class="section">
+
+        <div class="section-title">
+            🧠 Problem Set
+        </div>
+
+        <a href="sets-problem-set-1.html"
+           class="card">
+
+            <h2>🧠 Problem Set 1</h2>
+
+            <p>
+                Challenge yourself with mixed
+                Sets problems.
+            </p>
+
+        </a>
+
+    </div>
+
+
+    <!-- QUIZ -->
+
+    <div class="section">
+
+        <div class="section-title">
+            📝 Quiz
+        </div>
+
+        <a href="sets-quiz-1.html"
+           class="card">
+
+            <h2>📝 Quiz 1</h2>
+
+            <p>
+                Test your understanding of
+                Chapter 1 — Sets.
+            </p>
+
+        </a>
+
+    </div>
+
+
+    <!-- BACK -->
+
+    <a href="algebra.html" class="back">
+        ⬅️ Back to Algebra
+    </a>
 
 </div>
-
-  <br>
-
-  <a href="algebra.html">⬅️ Back to Algebra</a>
 
 </body>
   </html>
