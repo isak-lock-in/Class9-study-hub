@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sets - Problem Set 1</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        background: #f4f7fc;
+        color: #172b4d;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 34px;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        margin-top: 10px;
+    }
+
+    .subtitle {
+        color: #555;
+        margin-bottom: 25px;
+    }
+
+    .problem {
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0 2px 7px rgba(0,0,0,0.08);
+    }
+
+    .difficulty {
+        font-size: 13px;
+        color: #777;
+        margin-bottom: 8px;
+    }
+
+    input {
+        width: 90%;
+        max-width: 550px;
+        padding: 12px;
+        font-size: 17px;
+        border: 1px solid #aaa;
+        border-radius: 7px;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+
+    button {
+        padding: 10px 18px;
+        font-size: 16px;
+        border-radius: 7px;
+        border: none;
+        cursor: pointer;
+        margin-top: 12px;
+    }
+
+    .check-btn {
+        background: #172b4d;
+        color: white;
+    }
+
+    .check-btn:hover {
+        background: #263f69;
+    }
+
+    .result {
+        margin-top: 12px;
+        font-weight: bold;
+    }
+
+    .retry {
+        color: #a05a00;
+        font-size: 14px;
+        margin-top: 6px;
+    }
+
+    .solution {
+        display: none;
+        background: #f0f5ff;
+        border-left: 4px solid #315fbd;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 6px;
+    }
+
+    .score-box {
+        display: none;
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        margin-top: 30px;
+        text-align: center;
+        border: 1px solid #ccc;
+    }
+
+    .back {
+        display: inline-block;
+        margin-top: 30px;
+        color: #4d2a91;
+        font-size: 18px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📚 Chapter 1: Sets</h1>
+
+    <p class="subtitle">
+        Problem Set 1 — Apply what you've learned.
+    </p>
+
+    <hr>
+
+
+    <!-- PROBLEM 1 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🟢 Problem 1 — Easy</div>
+
+        <h2>1. Counting Elements</h2>
+
+        <p>
+            A = {3, 6, 9, 12, 15}
+        </p>
+
+        <p>
+            Find the number of elements in A.
+        </p>
+
+        <input
+            id="a1"
+            type="text"
+            placeholder="Enter your answer"
+        >
+
+        <br>
+
+        <button
+            class="check-btn"
+            onclick="checkAnswer(1, '5')"
+        >
+            Check Answer
+        </button>
+
+        <div class="result" id="r1"></div>
+        <div class="retry" id="retry1"></div>
+
+        <div class="solution" id="s1">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            A = {3, 6, 9, 12, 15}
+
+            <br><br>
+
+            Count the elements:
+
+            <br>
+
+            3 → 1
+
+            <br>
+            6 → 2
+
+            <br>
+            9 → 3
+
+            <br>
+            12 → 4
+
+            <br>
+            15 → 5
+
+            <br><br>
+
+            Therefore:
+
+            <strong>n(A) = 5</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEM 2 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🟢 Problem 2 — Easy/Medium</div>
+
+        <h2>2. Union in a Real Situation</h2>
+
+        <p>
+            In a class, 18 students like cricket and
+            12 students like football.
+        </p>
+
+        <p>
+            5 students like both cricket and football.
+        </p>
+
+        <p>
+            How many students like <strong>at least one</strong>
+            of the two sports?
+        </p>
+
+        <input
+            id="a2"
+            type="text"
+            placeholder="Enter the number of students"
+        >
+
+        <br>
+
+        <button
+            class="check-btn"
+            onclick="checkAnswer(2, '25')"
+        >
+            Check Answer
+        </button>
+
+        <div class="result" id="r2"></div>
+        <div class="retry" id="retry2"></div>
+
+        <div class="solution" id="s2">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            Use the union counting rule:
+
+            <br><br>
+
+            n(A ∪ B) = n(A) + n(B) − n(A ∩ B)
+
+            <br><br>
+
+            Substitute the values:
+
+            <br>
+
+            = 18 + 12 − 5
+
+            <br>
+
+            = 30 − 5
+
+            <br>
+
+            = <strong>25</strong>
+
+            <br><br>
+
+            Therefore, <strong>25 students</strong>
+            like at least one of the two sports.
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEM 3 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🟡 Problem 3 — Medium</div>
+
+        <h2>3. Union and Intersection</h2>
+
+        <p>
+            Let:
+        </p>
+
+        <p>
+            A = {2, 4, 6, 8}
+        </p>
+
+        <p>
+            B = {4, 6, 8, 10, 12}
+        </p>
+
+        <p>
+            Find the number of elements in
+            <strong>A ∪ B</strong>.
+        </p>
+
+        <input
+            id="a3"
+            type="text"
+            placeholder="Enter the number of elements"
+        >
+
+        <br>
+
+        <button
+            class="check-btn"
+            onclick="checkAnswer(3, '6')"
+        >
+            Check Answer
+        </button>
+
+        <div class="result" id="r3"></div>
+        <div class="retry" id="retry3"></div>
+
+        <div class="solution" id="s3">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            A = {2, 4, 6, 8}
+
+            <br>
+
+            B = {4, 6, 8, 10, 12}
+
+            <br><br>
+
+            Combine all distinct elements:
+
+            <br>
+
+            A ∪ B =
+            {2, 4, 6, 8, 10, 12}
+
+            <br><br>
+
+            There are 6 distinct elements.
+
+            <br><br>
+
+            Therefore:
+
+            <strong>n(A ∪ B) = 6</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEM 4 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🟠 Problem 4 — Hard</div>
+
+        <h2>4. Complement Problem</h2>
+
+        <p>
+            The universal set is:
+        </p>
+
+        <p>
+            U = {1,2,3,4,5,6,7,8,9,10,11,12}
+        </p>
+
+        <p>
+            A = {2,4,6,8,10,12}
+        </p>
+
+        <p>
+            Find the number of elements in A<sup>c</sup>.
+        </p>
+
+        <input
+            id="a4"
+            type="text"
+            placeholder="Enter the number of elements"
+        >
+
+        <br>
+
+        <button
+            class="check-btn"
+            onclick="checkAnswer(4, '6')"
+        >
+            Check Answer
+        </button>
+
+        <div class="result" id="r4"></div>
+        <div class="retry" id="retry4"></div>
+
+        <div class="solution" id="s4">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            The universal set contains 12 elements.
+
+            <br><br>
+
+            A contains the six even numbers:
+
+            <br>
+
+            {2,4,6,8,10,12}
+
+            <br><br>
+
+            The elements not in A are:
+
+            <br>
+
+            {1,3,5,7,9,11}
+
+            <br><br>
+
+            Therefore:
+
+            <strong>A<sup>c</sup> = {1,3,5,7,9,11}</strong>
+
+            <br><br>
+
+            So:
+
+            <strong>n(A<sup>c</sup>) = 6</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEM 5 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🔴 Problem 5 — Challenge</div>
+
+        <h2>5. Three-Set Challenge</h2>
+
+        <p>
+            In a group of students:
+        </p>
+
+        <p>
+            24 students like Mathematics,
+            20 like Science,
+            and 15 like both.
+        </p>
+
+        <p>
+            If there are 30 students who like at least one
+            of the two subjects, how many students like
+            <strong>only Science</strong>?
+        </p>
+
+        <input
+            id="a5"
+            type="text"
+            placeholder="Enter the number of students"
+        >
+
+        <br>
+
+        <button
+            class="check-btn"
+            onclick="checkAnswer(5, '6')"
+        >
+            Check Answer
+        </button>
+
+        <div class="result" id="r5"></div>
+        <div class="retry" id="retry5"></div>
+
+        <div class="solution" id="s5">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            Let:
+
+            <br>
+
+            n(M) = 24
+
+            <br>
+
+            n(S) = 20
+
+            <br>
+
+            n(M ∩ S) = 15
+
+            <br><br>
+
+            The number who like only Science is:
+
+            <br>
+
+            n(S) − n(M ∩ S)
+
+            <br>
+
+            = 20 − 15
+
+            <br>
+
+            = <strong>5</strong>
+
+            <br><br>
+
+            Therefore, the correct answer is:
+
+            <strong>5 students</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- SCORE -->
+
+    <div class="score-box" id="scoreBox">
+
+        <h2>🏆 Problem Set Complete!</h2>
+
+        <p id="scoreText"></p>
+
+        <p>
+            Keep going — you've completed another part
+            of the Sets chapter. 🔥
+        </p>
+
+    </div>
+
+
+    <a class="back" href="sets.html">
+        ⬅️ Back to Sets
+    </a>
+
+</div>
+
+
+<script>
+
+const attempts = [0, 0, 0, 0, 0];
+
+const completed = [false, false, false, false, false];
+
+let score = 0;
+
+
+function normalize(answer) {
+
+    return answer
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "")
+        .replace(/;/g, ",");
+}
+
+
+function checkAnswer(question, correctAnswer) {
+
+    const input = document.getElementById("a" + question);
+    const result = document.getElementById("r" + question);
+    const retry = document.getElementById("retry" + question);
+    const solution = document.getElementById("s" + question);
+
+    if (!input || !result || !retry || !solution) {
+        console.error("Missing element for question " + question);
+        return;
+    }
+
+    if (completed[question - 1]) {
+        return;
+    }
+
+
+    const answer = normalize(input.value);
+    const correct = normalize(correctAnswer);
+
+
+    if (answer === "") {
+
+        result.textContent =
+            "⚠️ Please enter an answer first.";
+
+        result.style.color = "#a05a00";
+
+        return;
+    }
+
+
+    attempts[question - 1]++;
+
+
+    if (answer === correct) {
+
+        result.textContent =
+            "✅ Correct! Great work 🔥";
+
+        result.style.color = "green";
+
+        solution.style.display = "block";
+
+        completed[question - 1] = true;
+
+        score++;
+
+        checkComplete();
+
+        return;
+    }
+
+
+    if (attempts[question - 1] < 3) {
+
+        const remaining =
+            3 - attempts[question - 1];
+
+        result.textContent =
+            "❌ Not quite. Try again!";
+
+        result.style.color = "red";
+
+        retry.textContent =
+            "🔄 " +
+            remaining +
+            (remaining === 1
+                ? " retry"
+                : " retries") +
+            " remaining.";
+
+        return;
+    }
+
+
+    result.textContent =
+        "❌ No more retries.";
+
+    result.style.color = "red";
+
+    retry.textContent =
+        "💡 Your step-by-step solution is shown below.";
+
+    solution.style.display = "block";
+
+    completed[question - 1] = true;
+
+    checkComplete();
+}
+
+
+function checkComplete() {
+
+    if (!completed.every(Boolean)) {
+        return;
+    }
+
+    const scoreBox =
+        document.getElementById("scoreBox");
+
+    const scoreText =
+        document.getElementById("scoreText");
+
+    scoreBox.style.display = "block";
+
+    scoreText.innerHTML =
+        "You scored <strong>" +
+        score +
+        " / 5</strong>.";
+
+    scoreBox.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+
+</script>
+
+</body>
+          </html>
