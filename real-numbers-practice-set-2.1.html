@@ -99,6 +99,7 @@
             background: #555;
             color: white;
             display: none;
+            margin-right: 7px;
         }
 
         .result {
@@ -116,6 +117,28 @@
         .wrong {
             background: #fff0f0;
             color: #b52b2b;
+        }
+
+        .solution {
+            background: #f0f4ff;
+            border-left: 4px solid #315fbd;
+            padding: 16px;
+            margin-top: 15px;
+            border-radius: 8px;
+            display: none;
+            line-height: 1.6;
+        }
+
+        .solution-title {
+            font-weight: bold;
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .attempts {
+            color: #666;
+            font-size: 14px;
+            margin-top: 8px;
         }
 
         .score-box {
@@ -194,15 +217,43 @@
 
         </div>
 
-        <button class="check" onclick="checkAnswer(1, 'b')">
+        <button class="check" id="check1" onclick="checkAnswer(1, 'b')">
             Check Answer
         </button>
 
         <button class="retry" id="retry1" onclick="retryQuestion(1)">
-            Retry
+            Retry 1
         </button>
 
+        <button class="retry" id="retryAgain1" onclick="retryQuestion(1)">
+            Retry 2
+        </button>
+
+        <div class="attempts" id="attempts1">
+            Attempts remaining: 2
+        </div>
+
         <div class="result" id="result1"></div>
+
+        <div class="solution" id="solution1">
+
+            <div class="solution-title">
+                Step-by-step solution 🧠
+            </div>
+
+            <div>
+                0.75 = 75/100, so it is rational.
+                <br><br>
+                -4 can be written as -4/1, so it is rational.
+                <br><br>
+                3/5 is already in fraction form, so it is rational.
+                <br><br>
+                √2 cannot be expressed as p/q where p and q are integers.
+                <br><br>
+                <strong>Therefore, √2 is irrational.</strong>
+            </div>
+
+        </div>
 
     </div>
 
@@ -237,15 +288,48 @@
 
         </div>
 
-        <button class="check" onclick="checkAnswer(2, 'c')">
+        <button class="check" id="check2" onclick="checkAnswer(2, 'c')">
             Check Answer
         </button>
 
         <button class="retry" id="retry2" onclick="retryQuestion(2)">
-            Retry
+            Retry 1
         </button>
 
+        <button class="retry" id="retryAgain2" onclick="retryQuestion(2)">
+            Retry 2
+        </button>
+
+        <div class="attempts" id="attempts2">
+            Attempts remaining: 2
+        </div>
+
         <div class="result" id="result2"></div>
+
+        <div class="solution" id="solution2">
+
+            <div class="solution-title">
+                Step-by-step solution 🧠
+            </div>
+
+            <div>
+                A rational number has a terminating decimal when,
+                in lowest form, its denominator contains only the
+                prime factors 2 and/or 5.
+                <br><br>
+
+                20 = 2 × 2 × 5
+                <br><br>
+
+                Therefore 7/20 has a terminating decimal.
+                <br><br>
+
+                <strong>
+                    7/20 = 0.35
+                </strong>
+            </div>
+
+        </div>
 
     </div>
 
@@ -280,15 +364,43 @@
 
         </div>
 
-        <button class="check" onclick="checkAnswer(3, 'a')">
+        <button class="check" id="check3" onclick="checkAnswer(3, 'a')">
             Check Answer
         </button>
 
         <button class="retry" id="retry3" onclick="retryQuestion(3)">
-            Retry
+            Retry 1
         </button>
 
+        <button class="retry" id="retryAgain3" onclick="retryQuestion(3)">
+            Retry 2
+        </button>
+
+        <div class="attempts" id="attempts3">
+            Attempts remaining: 2
+        </div>
+
         <div class="result" id="result3"></div>
+
+        <div class="solution" id="solution3">
+
+            <div class="solution-title">
+                Step-by-step solution 🧠
+            </div>
+
+            <div>
+                √72
+                <br><br>
+                = √(36 × 2)
+                <br><br>
+                = √36 × √2
+                <br><br>
+                = 6√2
+                <br><br>
+                <strong>Answer: 6√2</strong>
+            </div>
+
+        </div>
 
     </div>
 
@@ -323,15 +435,49 @@
 
         </div>
 
-        <button class="check" onclick="checkAnswer(4, 'b')">
+        <button class="check" id="check4" onclick="checkAnswer(4, 'b')">
             Check Answer
         </button>
 
         <button class="retry" id="retry4" onclick="retryQuestion(4)">
-            Retry
+            Retry 1
         </button>
 
+        <button class="retry" id="retryAgain4" onclick="retryQuestion(4)">
+            Retry 2
+        </button>
+
+        <div class="attempts" id="attempts4">
+            Attempts remaining: 2
+        </div>
+
         <div class="result" id="result4"></div>
+
+        <div class="solution" id="solution4">
+
+            <div class="solution-title">
+                Step-by-step solution 🧠
+            </div>
+
+            <div>
+                Any integer can be written as a fraction with
+                denominator 1.
+                <br><br>
+
+                For example:
+                <br>
+                5 = 5/1
+                <br>
+                -3 = -3/1
+                <br><br>
+
+                Therefore every integer is rational.
+                <br><br>
+
+                <strong>Answer: Every integer is a rational number.</strong>
+            </div>
+
+        </div>
 
     </div>
 
@@ -366,15 +512,47 @@
 
         </div>
 
-        <button class="check" onclick="checkAnswer(5, 'c')">
+        <button class="check" id="check5" onclick="checkAnswer(5, 'c')">
             Check Answer
         </button>
 
         <button class="retry" id="retry5" onclick="retryQuestion(5)">
-            Retry
+            Retry 1
         </button>
 
+        <button class="retry" id="retryAgain5" onclick="retryQuestion(5)">
+            Retry 2
+        </button>
+
+        <div class="attempts" id="attempts5">
+            Attempts remaining: 2
+        </div>
+
         <div class="result" id="result5"></div>
+
+        <div class="solution" id="solution5">
+
+            <div class="solution-title">
+                Step-by-step solution 🧠
+            </div>
+
+            <div>
+                Absolute value represents distance from zero.
+                <br><br>
+
+                The distance of -13 from zero is 13.
+                <br><br>
+
+                Therefore:
+                <br><br>
+
+                |−13| = 13
+                <br><br>
+
+                <strong>Answer: 13</strong>
+            </div>
+
+        </div>
 
     </div>
 
@@ -401,34 +579,64 @@
 
 <script>
 
-    const answered = {};
-    const answers = {
-        1: "b",
-        2: "c",
-        3: "a",
-        4: "b",
-        5: "c"
+    const attempts = {
+        1: 0,
+        2: 0,
+        3: 0,
+        4: 0,
+        5: 0
     };
+
+    const completed = {
+        1: false,
+        2: false,
+        3: false,
+        4: false,
+        5: false
+    };
+
 
     function checkAnswer(question, correctAnswer) {
 
-        const selected =
-            document.querySelector(
-                'input[name="q' + question + '"]:checked'
-            );
+        if (completed[question]) {
+            return;
+        }
 
-        const result =
-            document.getElementById("result" + question);
+        const selected = document.querySelector(
+            'input[name="q' + question + '"]:checked'
+        );
 
-        const retry =
-            document.getElementById("retry" + question);
+        const result = document.getElementById(
+            "result" + question
+        );
+
+        const attemptsText = document.getElementById(
+            "attempts" + question
+        );
+
+        const retry1 = document.getElementById(
+            "retry" + question
+        );
+
+        const retry2 = document.getElementById(
+            "retryAgain" + question
+        );
+
+        const solution = document.getElementById(
+            "solution" + question
+        );
 
         if (!selected) {
+
             result.style.display = "block";
             result.className = "result wrong";
             result.textContent = "Please select an answer first.";
+
             return;
         }
+
+
+        /* CORRECT */
 
         if (selected.value === correctAnswer) {
 
@@ -436,67 +644,135 @@
             result.className = "result correct";
             result.textContent = "Correct! 🔥";
 
-            retry.style.display = "none";
+            solution.style.display = "block";
 
-            answered[question] = true;
+            completed[question] = true;
 
             disableQuestion(question);
 
-        } else {
+            retry1.style.display = "none";
+            retry2.style.display = "none";
 
-            result.style.display = "block";
-            result.className = "result wrong";
-            result.textContent = "Not quite. Try again!";
+            attemptsText.textContent =
+                "Question completed.";
 
-            retry.style.display = "inline-block";
+            updateScore();
+
+            return;
         }
 
-        updateScore();
+
+        /* WRONG */
+
+        attempts[question]++;
+
+        result.style.display = "block";
+        result.className = "result wrong";
+
+        if (attempts[question] === 1) {
+
+            result.textContent =
+                "Not quite! You have 1 retry left.";
+
+            retry1.style.display = "inline-block";
+
+            attemptsText.textContent =
+                "Attempts remaining: 1";
+
+        }
+
+        else if (attempts[question] === 2) {
+
+            result.textContent =
+                "Still incorrect. You have your final retry.";
+
+            retry1.style.display = "none";
+            retry2.style.display = "inline-block";
+
+            attemptsText.textContent =
+                "Attempts remaining: 0 after this retry.";
+
+        }
+
+        else {
+
+            result.textContent =
+                "No more retries. Here's the solution.";
+
+            retry1.style.display = "none";
+            retry2.style.display = "none";
+
+            solution.style.display = "block";
+
+            completed[question] = true;
+
+            disableQuestion(question);
+
+            attemptsText.textContent =
+                "Question completed.";
+
+            updateScore();
+        }
     }
 
 
     function retryQuestion(question) {
 
-        const result =
-            document.getElementById("result" + question);
+        const result = document.getElementById(
+            "result" + question
+        );
 
-        const retry =
-            document.getElementById("retry" + question);
+        const retry1 = document.getElementById(
+            "retry" + question
+        );
 
-        result.style.display = "none";
-        retry.style.display = "none";
+        const retry2 = document.getElementById(
+            "retryAgain" + question
+        );
 
-        const options =
-            document.querySelectorAll(
-                'input[name="q' + question + '"]'
-            );
+        const options = document.querySelectorAll(
+            'input[name="q' + question + '"]'
+        );
 
         options.forEach(function(option) {
             option.checked = false;
-            option.disabled = false;
         });
+
+        result.style.display = "none";
+
+        retry1.style.display = "none";
+        retry2.style.display = "none";
     }
 
 
     function disableQuestion(question) {
 
-        const options =
-            document.querySelectorAll(
-                'input[name="q' + question + '"]'
-            );
+        const options = document.querySelectorAll(
+            'input[name="q' + question + '"]'
+        );
 
         options.forEach(function(option) {
             option.disabled = true;
         });
+
+        document.getElementById(
+            "check" + question
+        ).disabled = true;
     }
 
 
     function updateScore() {
 
-        const total = 5;
-        const score = Object.keys(answered).length;
+        let score = 0;
 
-        if (score === total) {
+        for (let i = 1; i <= 5; i++) {
+
+            if (completed[i]) {
+                score++;
+            }
+        }
+
+        if (score === 5) {
 
             const scoreBox =
                 document.getElementById("scoreBox");
@@ -507,12 +783,12 @@
             scoreBox.style.display = "block";
 
             scoreText.textContent =
-                "You got all 5 questions correct! " +
-                "Score: " + score + "/" + total + " 🔱";
+                "You completed all 5 questions! " +
+                "Score: " + score + "/5 🔱";
         }
     }
 
 </script>
 
 </body>
-              </html>
+    </html>
