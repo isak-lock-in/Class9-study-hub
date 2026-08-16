@@ -1,423 +1,565 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Chapter 1: Sets</title>
+    <title>Learn - Sets</title>
 
-  <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
-      color: #17294d;
-      margin: 0;
-      padding: 20px;
-    }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fc;
+            color: #172b4d;
+        }
 
-    h1 {
-      font-size: 42px;
-      margin-bottom: 5px;
-    }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 25px 18px 50px;
+        }
 
-    .subtitle {
-      font-size: 20px;
-      margin-bottom: 25px;
-    }
+        .top {
+            text-align: center;
+            margin-bottom: 35px;
+        }
 
-    .topic-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 50px;
-    }
+        .chapter-number {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 5px;
+        }
 
-    .topic-buttons a {
-      text-decoration: none;
-    }
+        h1 {
+            font-size: 38px;
+            margin: 5px 0;
+        }
 
-    .topic-buttons button,
-    .practice-buttons button {
-      font-size: 18px;
-      padding: 8px 12px;
-      border: 2px solid #888;
-      border-radius: 5px;
-      background: #f8f8f8;
-      cursor: pointer;
-    }
+        .description {
+            color: #666;
+            font-size: 17px;
+        }
 
-    .topic-buttons button:hover,
-    .practice-buttons button:hover {
-      background: #e8eef8;
-    }
+        .topic {
+            background: white;
+            border: 1px solid #d8dce5;
+            border-radius: 14px;
+            padding: 22px;
+            margin: 18px 0;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+        }
 
-    .lesson-section {
-      padding: 25px 0;
-      border-bottom: 2px solid #aaa;
-    }
+        .topic h2 {
+            margin-top: 0;
+            font-size: 23px;
+        }
 
-    .lesson-section h2 {
-      font-size: 34px;
-      margin-bottom: 18px;
-    }
+        .topic h3 {
+            margin-top: 22px;
+            font-size: 18px;
+        }
 
-    .lesson-section p {
-      font-size: 20px;
-      line-height: 1.5;
-    }
+        .topic p {
+            color: #444;
+        }
 
-    .example {
-      font-size: 21px;
-      margin: 15px 0;
-    }
+        .formula {
+            background: #f0f4ff;
+            border-left: 4px solid #315fbd;
+            padding: 14px;
+            margin: 15px 0;
+            border-radius: 7px;
+            font-size: 17px;
+            overflow-x: auto;
+        }
 
-    /* READY TO PRACTICE */
+        .example {
+            background: #f7f7f7;
+            border-left: 4px solid #777;
+            padding: 14px;
+            margin: 15px 0;
+            border-radius: 7px;
+        }
 
-    .practice-area {
-      margin-top: 55px;
-      padding: 20px 0 35px;
-    }
+        .tip {
+            background: #fff8e8;
+            border-left: 4px solid #d99a00;
+            padding: 14px;
+            margin: 15px 0;
+            border-radius: 7px;
+        }
 
-    .practice-area h2 {
-      font-size: 42px;
-      margin-bottom: 30px;
-    }
+        ul {
+            padding-left: 25px;
+        }
 
-    .practice-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      max-width: 850px;
-    }
+        li {
+            margin: 7px 0;
+        }
 
-    .practice-buttons a {
-      text-decoration: none;
-    }
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #4d2a91;
+            font-size: 17px;
+        }
 
-    .practice-buttons button {
-      font-size: 20px;
-      min-width: 250px;
-      padding: 12px 18px;
-    }
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
 
-    .back-button {
-      display: inline-block;
-      margin-top: 20px;
-      font-size: 22px;
-      color: #4b238c;
-    }
-  </style>
+            .topic {
+                padding: 18px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <h1>📖 Chapter 1: Sets</h1>
+<div class="container">
 
-  <p class="subtitle">
-    Learn the important concepts of Sets step by step.
-  </p>
+    <!-- HEADER -->
 
+    <div class="top">
 
-  <!-- TOPIC BUTTONS -->
+        <div class="chapter-number">
+            CHAPTER 1
+        </div>
 
-  <div class="topic-buttons">
+        <h1>Sets</h1>
 
-    <a href="#introduction">
-      <button>🔹 Introduction to Sets</button>
-    </a>
-
-    <a href="#listing">
-      <button>📝 Listing / Roster Method</button>
-    </a>
-
-    <a href="#rule">
-      <button>📕 Rule / Set-Builder Method</button>
-    </a>
-
-    <a href="#equal">
-      <button>🟰 Equal Sets</button>
-    </a>
-
-    <a href="#finite">
-      <button>📦 Finite & Infinite Sets</button>
-    </a>
-
-    <a href="#venn">
-      <button>⭕ Venn Diagrams</button>
-    </a>
-
-    <a href="#subsets">
-      <button>🔗 Subsets</button>
-    </a>
-
-    <a href="#universal">
-      <button>🌐 Universal Set</button>
-    </a>
-
-    <a href="#complement">
-      <button>↪️ Complement of a Set</button>
-    </a>
-
-    <a href="#union">
-      <button>➕ Union of Sets</button>
-    </a>
-
-    <a href="#intersection">
-      <button>✖️ Intersection of Sets</button>
-    </a>
-
-  </div>
-
-
-  <!-- INTRODUCTION -->
-
-  <section class="lesson-section" id="introduction">
-
-    <h2>🔹 Introduction to Sets</h2>
-
-    <p>
-      A set is a well-defined collection of objects or elements.
-    </p>
-
-    <p class="example">
-      <b>Example:</b> A = {2, 4, 6, 8}
-    </p>
-
-    <p>
-      The numbers 2, 4, 6 and 8 are the elements of set A.
-    </p>
-
-  </section>
-
-
-  <!-- LISTING METHOD -->
-
-  <section class="lesson-section" id="listing">
-
-    <h2>📝 Listing / Roster Method</h2>
-
-    <p>
-      In the listing method, all the elements of a set are written
-      inside curly brackets and separated by commas.
-    </p>
-
-    <p class="example">
-      <b>Example:</b> A = {1, 2, 3, 4, 5}
-    </p>
-
-  </section>
-
-
-  <!-- RULE METHOD -->
-
-  <section class="lesson-section" id="rule">
-
-    <h2>📕 Rule / Set-Builder Method</h2>
-
-    <p>
-      In the rule method, the elements of a set are described using
-      a rule or condition.
-    </p>
-
-    <p class="example">
-      <b>Example:</b> A = {x | x is an even natural number less than 10}
-    </p>
-
-  </section>
-
-
-  <!-- EQUAL SETS -->
-
-  <section class="lesson-section" id="equal">
-
-    <h2>🟰 Equal Sets</h2>
-
-    <p>
-      Two sets are equal when they contain exactly the same elements,
-      regardless of the order in which the elements are written.
-    </p>
-
-    <p class="example">
-      A = {1, 2, 3}
-    </p>
-
-    <p class="example">
-      B = {3, 1, 2}
-    </p>
-
-    <p>
-      Therefore, A = B.
-    </p>
-
-  </section>
-
-
-  <!-- FINITE & INFINITE -->
-
-  <section class="lesson-section" id="finite">
-
-    <h2>📦 Finite & Infinite Sets</h2>
-
-    <p>
-      A set having a definite number of elements is called a finite set.
-    </p>
-
-    <p>
-      A set whose number of elements cannot be counted is called an
-      infinite set.
-    </p>
-
-    <p class="example">
-      <b>Finite:</b> {1, 2, 3, 4, 5}
-    </p>
-
-    <p class="example">
-      <b>Infinite:</b> {1, 2, 3, 4, 5, ...}
-    </p>
-
-  </section>
-
-
-  <!-- VENN DIAGRAMS -->
-
-  <section class="lesson-section" id="venn">
-
-    <h2>⭕ Venn Diagrams</h2>
-
-    <p>
-      Venn diagrams represent sets using closed figures, usually circles.
-      They help us understand relationships between sets visually.
-    </p>
-
-  </section>
-
-
-  <!-- SUBSETS -->
-
-  <section class="lesson-section" id="subsets">
-
-    <h2>🔗 Subsets</h2>
-
-    <p>
-      Set B is a subset of set A if every element of B is also an
-      element of A.
-    </p>
-
-    <p class="example">
-      B ⊆ A
-    </p>
-
-  </section>
-
-
-  <!-- UNIVERSAL SET -->
-
-  <section class="lesson-section" id="universal">
-
-    <h2>🌐 Universal Set</h2>
-
-    <p>
-      The universal set contains all the elements being considered
-      in a particular situation.
-    </p>
-
-  </section>
-
-
-  <!-- COMPLEMENT -->
-
-  <section class="lesson-section" id="complement">
-
-    <h2>↪️ Complement of a Set</h2>
-
-    <p>
-      The complement of set A contains all the elements of the universal
-      set that are not present in A.
-    </p>
-
-    <p class="example">
-      A′ = U − A
-    </p>
-
-  </section>
-
-
-  <!-- UNION -->
-
-  <section class="lesson-section" id="union">
-
-    <h2>➕ Union of Sets</h2>
-
-    <p>
-      The union of two sets contains all elements that belong to either
-      set, without repeating common elements.
-    </p>
-
-    <p class="example">
-      A ∪ B
-    </p>
-
-  </section>
-
-
-  <!-- INTERSECTION -->
-
-  <section class="lesson-section" id="intersection">
-
-    <h2>✖️ Intersection of Sets</h2>
-
-    <p>
-      The intersection of two sets contains only the elements that are
-      common to both sets.
-    </p>
-
-    <p class="example">
-      A ∩ B
-    </p>
-
-  </section>
-
-
-  <!-- READY TO PRACTICE -->
-
-  <section class="practice-area">
-
-    <h2>🎯 Ready to Practice?</h2>
-
-    <div class="practice-buttons">
-
-      <!-- Already-created page -->
-      <a href="sets-important-points.html">
-        <button>⭐ Important Points</button>
-      </a>
-
-      <!-- Create this page later -->
-      <a href="sets-practice.html">
-        <button>📝 Practice Sets</button>
-      </a>
-
-      <!-- Create this page later -->
-      <a href="#">
-        <button>🧠 Problem Set 1</button>
-      </a>
-
-      <!-- Create/use your quiz page later -->
-      <a href="#">
-        <button>🎯 Take Free Quiz</button>
-      </a>
+        <p class="description">
+            Learn the important concepts of Sets step by step.
+        </p>
 
     </div>
 
-  </section>
+
+    <!-- 1 -->
+
+    <div class="topic">
+
+        <h2>1. What is a Set?</h2>
+
+        <p>
+            A set is a well-defined collection of distinct objects.
+            The objects in a set are called its elements or members.
+        </p>
+
+        <div class="example">
+            Example:<br><br>
+            A = {2, 4, 6, 8}
+            <br><br>
+            Here 2, 4, 6 and 8 are the elements of A.
+        </div>
+
+        <div class="tip">
+            💡 A collection must have a clear rule for deciding
+            whether an object belongs to it.
+        </div>
+
+    </div>
 
 
-  <!-- BACK -->
+    <!-- 2 -->
 
-  <a class="back-button" href="sets.html">
-    ↩️ Back to Sets
-  </a>
+    <div class="topic">
+
+        <h2>2. Representation of Sets</h2>
+
+        <h3>Roster / Tabular Form</h3>
+
+        <p>
+            In this method, all the elements are written inside
+            curly brackets.
+        </p>
+
+        <div class="example">
+            A = {1, 2, 3, 4, 5}
+        </div>
+
+        <h3>Set-Builder Form</h3>
+
+        <p>
+            In this method, a rule or property common to all
+            elements is described.
+        </p>
+
+        <div class="example">
+            A = {x : x is a natural number less than 6}
+        </div>
+
+    </div>
+
+
+    <!-- 3 -->
+
+    <div class="topic">
+
+        <h2>3. Types of Sets</h2>
+
+        <h3>Empty Set</h3>
+
+        <p>
+            A set containing no elements is called an empty set
+            or null set.
+        </p>
+
+        <div class="formula">
+            ∅ or { }
+        </div>
+
+        <h3>Singleton Set</h3>
+
+        <p>
+            A set containing exactly one element is called
+            a singleton set.
+        </p>
+
+        <div class="example">
+            A = {7}
+        </div>
+
+        <h3>Finite Set</h3>
+
+        <p>
+            A set having a definite number of elements is
+            called a finite set.
+        </p>
+
+        <h3>Infinite Set</h3>
+
+        <p>
+            A set that continues without a final element is
+            called an infinite set.
+        </p>
+
+        <div class="example">
+            N = {1, 2, 3, 4, ...}
+        </div>
+
+    </div>
+
+
+    <!-- 4 -->
+
+    <div class="topic">
+
+        <h2>4. Equal Sets</h2>
+
+        <p>
+            Two sets are equal when they contain exactly the
+            same elements.
+        </p>
+
+        <div class="example">
+            A = {1, 2, 3}
+            <br>
+            B = {3, 2, 1}
+            <br><br>
+            Therefore A = B.
+        </div>
+
+        <div class="tip">
+            💡 The order of elements does not matter in a set.
+        </div>
+
+    </div>
+
+
+    <!-- 5 -->
+
+    <div class="topic">
+
+        <h2>5. Subsets</h2>
+
+        <p>
+            A is a subset of B if every element of A is also
+            an element of B.
+        </p>
+
+        <div class="formula">
+            A ⊆ B
+        </div>
+
+        <div class="example">
+            A = {1, 2}
+            <br>
+            B = {1, 2, 3, 4}
+            <br><br>
+            Therefore A ⊆ B.
+        </div>
+
+        <p>
+            Every set is a subset of itself.
+        </p>
+
+        <div class="formula">
+            A ⊆ A
+        </div>
+
+    </div>
+
+
+    <!-- 6 -->
+
+    <div class="topic">
+
+        <h2>6. Power Set</h2>
+
+        <p>
+            The power set of A is the set containing all subsets
+            of A.
+        </p>
+
+        <div class="example">
+            If A = {1, 2}, then:
+            <br><br>
+            P(A) = {∅, {1}, {2}, {1,2}}
+        </div>
+
+        <div class="formula">
+            If n(A) = n, then n(P(A)) = 2ⁿ
+        </div>
+
+    </div>
+
+
+    <!-- 7 -->
+
+    <div class="topic">
+
+        <h2>7. Universal Set</h2>
+
+        <p>
+            The universal set contains all the objects under
+            consideration in a particular situation.
+        </p>
+
+        <div class="example">
+            If we are discussing numbers from 1 to 10:
+            <br><br>
+            U = {1,2,3,4,5,6,7,8,9,10}
+        </div>
+
+    </div>
+
+
+    <!-- 8 -->
+
+    <div class="topic">
+
+        <h2>8. Union of Sets</h2>
+
+        <p>
+            The union of two sets contains every distinct element
+            that belongs to either set.
+        </p>
+
+        <div class="formula">
+            A ∪ B
+        </div>
+
+        <div class="example">
+            A = {1,2,3}
+            <br>
+            B = {3,4,5}
+            <br><br>
+            A ∪ B = {1,2,3,4,5}
+        </div>
+
+    </div>
+
+
+    <!-- 9 -->
+
+    <div class="topic">
+
+        <h2>9. Intersection of Sets</h2>
+
+        <p>
+            The intersection contains the elements that are
+            common to both sets.
+        </p>
+
+        <div class="formula">
+            A ∩ B
+        </div>
+
+        <div class="example">
+            A = {1,2,3}
+            <br>
+            B = {3,4,5}
+            <br><br>
+            A ∩ B = {3}
+        </div>
+
+    </div>
+
+
+    <!-- 10 -->
+
+    <div class="topic">
+
+        <h2>10. Difference of Sets</h2>
+
+        <p>
+            A − B contains elements that belong to A but do not
+            belong to B.
+        </p>
+
+        <div class="example">
+            A = {1,2,3,4}
+            <br>
+            B = {3,4,5}
+            <br><br>
+            A − B = {1,2}
+        </div>
+
+    </div>
+
+
+    <!-- 11 -->
+
+    <div class="topic">
+
+        <h2>11. Complement of a Set</h2>
+
+        <p>
+            The complement of A contains the elements of the
+            universal set that are not in A.
+        </p>
+
+        <div class="formula">
+            Aᶜ = U − A
+        </div>
+
+        <div class="example">
+            U = {1,2,3,4,5}
+            <br>
+            A = {2,4}
+            <br><br>
+            Aᶜ = {1,3,5}
+        </div>
+
+    </div>
+
+
+    <!-- 12 -->
+
+    <div class="topic">
+
+        <h2>12. Number of Elements</h2>
+
+        <p>
+            The number of elements in a set A is denoted by n(A).
+        </p>
+
+        <div class="example">
+            A = {5, 10, 15, 20}
+            <br><br>
+            n(A) = 4
+        </div>
+
+        <h3>Union Formula</h3>
+
+        <div class="formula">
+            n(A ∪ B) = n(A) + n(B) − n(A ∩ B)
+        </div>
+
+        <div class="tip">
+            💡 The intersection is subtracted because common
+            elements would otherwise be counted twice.
+        </div>
+
+    </div>
+
+
+    <!-- 13 -->
+
+    <div class="topic">
+
+        <h2>13. Venn Diagrams</h2>
+
+        <p>
+            Venn diagrams represent sets using closed shapes,
+            usually circles, inside a universal-set rectangle.
+        </p>
+
+        <p>
+            They can help visualize union, intersection,
+            difference and complements.
+        </p>
+
+        <div class="example">
+            Two overlapping circles can represent two sets.
+            The overlapping region represents A ∩ B.
+        </div>
+
+    </div>
+
+
+    <!-- 14 -->
+
+    <div class="topic">
+
+        <h2>14. Important Set Properties</h2>
+
+        <div class="formula">
+            A ∪ A = A
+            <br><br>
+            A ∩ A = A
+            <br><br>
+            A ∪ ∅ = A
+            <br><br>
+            A ∩ ∅ = ∅
+            <br><br>
+            A ∪ U = U
+            <br><br>
+            A ∩ U = A
+        </div>
+
+    </div>
+
+
+    <!-- QUICK REVISION -->
+
+    <div class="topic">
+
+        <h2>15. Quick Revision</h2>
+
+        <ul>
+            <li>A set is a well-defined collection of distinct objects.</li>
+            <li>Elements are written inside curly brackets.</li>
+            <li>∅ represents the empty set.</li>
+            <li>A ⊆ B means every element of A is in B.</li>
+            <li>The power set contains all subsets of a set.</li>
+            <li>A ∪ B contains elements from A or B.</li>
+            <li>A ∩ B contains elements common to A and B.</li>
+            <li>A − B contains elements in A but not B.</li>
+            <li>Aᶜ contains elements in U but not A.</li>
+            <li>n(A) represents the number of elements in A.</li>
+            <li>Venn diagrams help visualize relationships between sets.</li>
+        </ul>
+
+    </div>
+
+
+    <!-- BACK -->
+
+    <a href="sets.html" class="back">
+        ⬅️ Back to Sets
+    </a>
+
+</div>
 
 </body>
-</html>
+  </html>
