@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Polynomials - Study Hub</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 20px;
+        background: #f4f7fc;
+        color: #172b4d;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 5px;
+    }
+
+    .subtitle {
+        color: #666;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+
+    .chapter-info {
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 14px;
+        padding: 22px;
+        margin: 20px 0 25px;
+        box-shadow: 0 2px 7px rgba(0,0,0,0.08);
+    }
+
+    .chapter-info h2 {
+        margin-top: 0;
+    }
+
+    .section-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-top: 25px;
+    }
+
+    .section-card {
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 14px;
+        padding: 22px;
+        box-shadow: 0 2px 7px rgba(0,0,0,0.08);
+        transition: 0.2s ease;
+    }
+
+    .section-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 14px rgba(0,0,0,0.12);
+    }
+
+    .section-card h2 {
+        margin-top: 0;
+        font-size: 22px;
+    }
+
+    .section-card p {
+        color: #666;
+    }
+
+    .section-btn {
+        display: inline-block;
+        text-decoration: none;
+        background: #172b4d;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 7px;
+        margin-top: 8px;
+        font-size: 16px;
+        transition: 0.2s;
+    }
+
+    .section-btn:hover {
+        background: #263f69;
+    }
+
+    .practice-card {
+        grid-column: span 2;
+    }
+
+    .practice-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    .practice-link {
+        display: block;
+        text-decoration: none;
+        background: #f7f9fc;
+        border: 1px solid #d4d9e2;
+        color: #172b4d;
+        padding: 12px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: bold;
+        transition: 0.2s;
+    }
+
+    .practice-link:hover {
+        background: #eef3ff;
+        border-color: #315fbd;
+    }
+
+    .back {
+        display: inline-block;
+        margin-top: 30px;
+        color: #4d2a91;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    .tip {
+        background: #f0f5ff;
+        border-left: 4px solid #315fbd;
+        padding: 15px;
+        border-radius: 7px;
+        margin-top: 25px;
+    }
+
+    @media (max-width: 700px) {
+
+        .section-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .practice-card {
+            grid-column: span 1;
+        }
+
+        .practice-links {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 450px) {
+
+        .practice-links {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <h1>📚 Chapter 3: Polynomials</h1>
+
+    <p class="subtitle">
+        Learn, practice, solve and test yourself.
+    </p>
+
+    <hr>
+
+
+    <!-- CHAPTER INFO -->
+
+    <div class="chapter-info">
+
+        <h2>🧮 Polynomials</h2>
+
+        <p>
+            Welcome to Chapter 3 of your Class 9 Maths Study Hub.
+        </p>
+
+        <p>
+            Learn the concepts step-by-step, revise the important
+            points, practise textbook questions, complete Problem
+            Set 3 and finally test yourself with a quiz.
+        </p>
+
+        <div class="tip">
+            <strong>🔥 Study order:</strong>
+            Learn → Important Points → Practice Sets →
+            Problem Set 3 → Quiz
+        </div>
+
+    </div>
+
+
+    <!-- MAIN SECTIONS -->
+
+    <div class="section-grid">
+
+
+        <!-- LEARN -->
+
+        <div class="section-card">
+
+            <h2>📖 Learn</h2>
+
+            <p>
+                Understand polynomials from the basics with
+                clear explanations and examples.
+            </p>
+
+            <a
+                class="section-btn"
+                href="polynomial-learn.html"
+            >
+                Start Learning →
+            </a>
+
+        </div>
+
+
+        <!-- IMPORTANT POINTS -->
+
+        <div class="section-card">
+
+            <h2>⭐ Important Points</h2>
+
+            <p>
+                Quickly revise the formulas, definitions,
+                rules and concepts you must remember.
+            </p>
+
+            <a
+                class="section-btn"
+                href="polynomial-important-points.html"
+            >
+                View Important Points →
+            </a>
+
+        </div>
+
+
+        <!-- PRACTICE SETS -->
+
+        <div class="section-card practice-card">
+
+            <h2>📝 Practice Sets</h2>
+
+            <p>
+                Practise the textbook exercises from Chapter 3.
+                Complete them one set at a time.
+            </p>
+
+            <div class="practice-links">
+
+                <a
+                    class="practice-link"
+                    href="polynomial-practice-set-3.1.html"
+                >
+                    Practice Set 3.1
+                </a>
+
+                <a
+                    class="practice-link"
+                    href="polynomial-practice-set-3.2.html"
+                >
+                    Practice Set 3.2
+                </a>
+
+                <a
+                    class="practice-link"
+                    href="polynomial-practice-set-3.3.html"
+                >
+                    Practice Set 3.3
+                </a>
+
+                <a
+                    class="practice-link"
+                    href="polynomial-practice-set-3.4.html"
+                >
+                    Practice Set 3.4
+                </a>
+
+                <a
+                    class="practice-link"
+                    href="polynomial-practice-set-3.5.html"
+                >
+                    Practice Set 3.5
+                </a>
+
+                <a
+                    class="practice-link"
+                    href="polynomial-practice-set-3.6.html"
+                >
+                    Practice Set 3.6
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROBLEM SET -->
+
+        <div class="section-card">
+
+            <h2>📚 Problem Set 3</h2>
+
+            <p>
+                Apply everything you've learned in a complete
+                chapter problem set.
+            </p>
+
+            <a
+                class="section-btn"
+                href="polynomial-problem-set-3.html"
+            >
+                Open Problem Set →
+            </a>
+
+        </div>
+
+
+        <!-- QUIZ -->
+
+        <div class="section-card">
+
+            <h2>🧠 Quiz</h2>
+
+            <p>
+                Test your understanding of Polynomials with
+                multiple-choice questions and limited retries.
+            </p>
+
+            <a
+                class="section-btn"
+                href="polynomial-quiz-1.html"
+            >
+                Start Quiz →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <a
+        class="back"
+        href="index.html"
+    >
+        ⬅️ Back to Study Hub
+    </a>
+
+</div>
+
+</body>
+  </html>
