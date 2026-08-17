@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Polynomials - Practice Set 3.2</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        background: #f4f7fc;
+        color: #172b4d;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 34px;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        margin-top: 10px;
+    }
+
+    .subtitle {
+        color: #555;
+        margin-bottom: 25px;
+    }
+
+    .problem {
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0 2px 7px rgba(0,0,0,0.08);
+    }
+
+    .difficulty {
+        font-size: 13px;
+        color: #777;
+        margin-bottom: 8px;
+    }
+
+    input {
+        width: 90%;
+        max-width: 550px;
+        padding: 12px;
+        font-size: 17px;
+        border: 1px solid #aaa;
+        border-radius: 7px;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+
+    button {
+        padding: 10px 18px;
+        font-size: 16px;
+        border-radius: 7px;
+        border: none;
+        cursor: pointer;
+        margin-top: 12px;
+    }
+
+    .check-btn {
+        background: #172b4d;
+        color: white;
+    }
+
+    .check-btn:hover {
+        background: #263f69;
+    }
+
+    .result {
+        margin-top: 12px;
+        font-weight: bold;
+    }
+
+    .retry {
+        color: #a05a00;
+        font-size: 14px;
+        margin-top: 6px;
+    }
+
+    .solution {
+        display: none;
+        background: #f0f5ff;
+        border-left: 4px solid #315fbd;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 6px;
+    }
+
+    .score-box {
+        display: none;
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        margin-top: 30px;
+        text-align: center;
+        border: 1px solid #ccc;
+    }
+
+    .back {
+        display: inline-block;
+        margin-top: 30px;
+        color: #4d2a91;
+        font-size: 18px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📚 Chapter 3: Polynomials</h1>
+
+    <p class="subtitle">
+        Practice Set 3.2 — Operations and identities.
+    </p>
+
+    <hr>
+
+
+    <!-- PROBLEM 1 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🟢 Problem 1 — Easy</div>
+
+        <h2>1. Adding Polynomials</h2>
+
+        <p>
+            Add:
+        </p>
+
+        <p>
+            (3x + 7) + (5x − 2)
+        </p>
+
+        <input id="a1" type="text"
+               placeholder="Enter the simplified expression">
+
+        <br>
+
+        <button class="check-btn"
+                onclick="checkAnswer(1, '8x+5')">
+            Check Answer
+        </button>
+
+        <div class="result" id="r1"></div>
+        <div class="retry" id="retry1"></div>
+
+        <div class="solution" id="s1">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            Combine like terms:
+
+            <br><br>
+
+            3x + 5x = 8x
+
+            <br>
+
+            7 − 2 = 5
+
+            <br><br>
+
+            Therefore:
+
+            <strong>8x + 5</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEM 2 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🟢 Problem 2 — Easy/Medium</div>
+
+        <h2>2. Subtracting Polynomials</h2>
+
+        <p>
+            Simplify:
+        </p>
+
+        <p>
+            (7x<sup>2</sup> + 3x − 4)
+            −
+            (2x<sup>2</sup> − x + 5)
+        </p>
+
+        <input id="a2" type="text"
+               placeholder="Enter the simplified expression">
+
+        <br>
+
+        <button class="check-btn"
+                onclick="checkAnswer(2, '5x^2+4x-9')">
+            Check Answer
+        </button>
+
+        <div class="result" id="r2"></div>
+        <div class="retry" id="retry2"></div>
+
+        <div class="solution" id="s2">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            Distribute the minus sign:
+
+            <br><br>
+
+            7x<sup>2</sup> + 3x − 4
+            − 2x<sup>2</sup> + x − 5
+
+            <br><br>
+
+            Combine like terms:
+
+            <br>
+
+            7x<sup>2</sup> − 2x<sup>2</sup>
+            = 5x<sup>2</sup>
+
+            <br>
+
+            3x + x = 4x
+
+            <br>
+
+            −4 − 5 = −9
+
+            <br><br>
+
+            <strong>Answer = 5x<sup>2</sup> + 4x − 9</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEM 3 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🟡 Problem 3 — Medium</div>
+
+        <h2>3. Multiplication</h2>
+
+        <p>
+            Expand:
+        </p>
+
+        <p>
+            4x(2x<sup>2</sup> − 3x + 5)
+        </p>
+
+        <input id="a3" type="text"
+               placeholder="Enter the expanded expression">
+
+        <br>
+
+        <button class="check-btn"
+                onclick="checkAnswer(3, '8x^3-12x^2+20x')">
+            Check Answer
+        </button>
+
+        <div class="result" id="r3"></div>
+        <div class="retry" id="retry3"></div>
+
+        <div class="solution" id="s3">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            Multiply 4x by every term:
+
+            <br><br>
+
+            4x × 2x<sup>2</sup> = 8x<sup>3</sup>
+
+            <br>
+
+            4x × (−3x) = −12x<sup>2</sup>
+
+            <br>
+
+            4x × 5 = 20x
+
+            <br><br>
+
+            Therefore:
+
+            <strong>
+                8x<sup>3</sup> − 12x<sup>2</sup> + 20x
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEM 4 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🟠 Problem 4 — Hard</div>
+
+        <h2>4. Identity Challenge</h2>
+
+        <p>
+            Simplify:
+        </p>
+
+        <p>
+            (x + 6)<sup>2</sup>
+        </p>
+
+        <input id="a4" type="text"
+               placeholder="Enter the expanded expression">
+
+        <br>
+
+        <button class="check-btn"
+                onclick="checkAnswer(4, 'x^2+12x+36')">
+            Check Answer
+        </button>
+
+        <div class="result" id="r4"></div>
+        <div class="retry" id="retry4"></div>
+
+        <div class="solution" id="s4">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            Use:
+
+            <br>
+
+            (a + b)<sup>2</sup>
+            = a<sup>2</sup> + 2ab + b<sup>2</sup>
+
+            <br><br>
+
+            Here:
+
+            <br>
+
+            a = x, b = 6
+
+            <br><br>
+
+            Therefore:
+
+            <br>
+
+            x<sup>2</sup> + 12x + 36
+
+            <br><br>
+
+            <strong>Answer = x<sup>2</sup> + 12x + 36</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEM 5 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🔴 Problem 5 — Challenge</div>
+
+        <h2>5. Difference of Squares</h2>
+
+        <p>
+            Simplify:
+        </p>
+
+        <p>
+            (3x + 5)(3x − 5)
+        </p>
+
+        <input id="a5" type="text"
+               placeholder="Enter the simplified expression">
+
+        <br>
+
+        <button class="check-btn"
+                onclick="checkAnswer(5, '9x^2-25')">
+            Check Answer
+        </button>
+
+        <div class="result" id="r5"></div>
+        <div class="retry" id="retry5"></div>
+
+        <div class="solution" id="s5">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            Use:
+
+            <br>
+
+            (a + b)(a − b) = a<sup>2</sup> − b<sup>2</sup>
+
+            <br><br>
+
+            Here:
+
+            <br>
+
+            a = 3x
+
+            <br>
+
+            b = 5
+
+            <br><br>
+
+            Therefore:
+
+            <br>
+
+            (3x)<sup>2</sup> − 5<sup>2</sup>
+
+            <br>
+
+            = 9x<sup>2</sup> − 25
+
+            <br><br>
+
+            <strong>Answer = 9x<sup>2</sup> − 25</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- SCORE -->
+
+    <div class="score-box" id="scoreBox">
+
+        <h2>🏆 Practice Set Complete!</h2>
+
+        <p id="scoreText"></p>
+
+        <p>
+            Polynomial operations getting stronger. 🔥
+        </p>
+
+    </div>
+
+
+    <a class="back" href="polynomial.html">
+        ⬅️ Back to Polynomials
+    </a>
+
+</div>
+
+
+<script>
+
+const attempts = [0, 0, 0, 0, 0];
+
+const completed = [false, false, false, false, false];
+
+let score = 0;
+
+
+function normalize(answer) {
+
+    return answer
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "")
+        .replace(/−/g, "-");
+}
+
+
+function checkAnswer(question, correctAnswer) {
+
+    const input = document.getElementById("a" + question);
+    const result = document.getElementById("r" + question);
+    const retry = document.getElementById("retry" + question);
+    const solution = document.getElementById("s" + question);
+
+    if (completed[question - 1]) return;
+
+    const answer = normalize(input.value);
+    const correct = normalize(correctAnswer);
+
+    if (answer === "") {
+
+        result.textContent = "⚠️ Please enter an answer first.";
+        result.style.color = "#a05a00";
+        return;
+
+    }
+
+    attempts[question - 1]++;
+
+    if (answer === correct) {
+
+        result.textContent = "✅ Correct! Great work 🔥";
+        result.style.color = "green";
+
+        solution.style.display = "block";
+
+        completed[question - 1] = true;
+
+        score++;
+
+        checkComplete();
+
+        return;
+
+    }
+
+    if (attempts[question - 1] < 3) {
+
+        const remaining = 3 - attempts[question - 1];
+
+        result.textContent = "❌ Not quite. Try again!";
+        result.style.color = "red";
+
+        retry.textContent =
+            "🔄 " +
+            remaining +
+            (remaining === 1 ? " retry" : " retries") +
+            " remaining.";
+
+        return;
+
+    }
+
+    result.textContent = "❌ No more retries.";
+    result.style.color = "red";
+
+    retry.textContent =
+        "💡 Your step-by-step solution is shown below.";
+
+    solution.style.display = "block";
+
+    completed[question - 1] = true;
+
+    checkComplete();
+
+}
+
+
+function checkComplete() {
+
+    if (!completed.every(Boolean)) return;
+
+    const scoreBox = document.getElementById("scoreBox");
+    const scoreText = document.getElementById("scoreText");
+
+    scoreBox.style.display = "block";
+
+    scoreText.innerHTML =
+        "You scored <strong>" +
+        score +
+        " / 5</strong>.";
+
+    scoreBox.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+</script>
+
+</body>
+  </html>
