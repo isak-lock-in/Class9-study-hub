@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Polynomials - Practice Set 3.3</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 20px;
+        background: #f4f7fc;
+        color: #172b4d;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 850px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 34px;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        margin-top: 10px;
+    }
+
+    .subtitle {
+        color: #555;
+        margin-bottom: 25px;
+    }
+
+    .problem {
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: 0 2px 7px rgba(0,0,0,0.08);
+    }
+
+    .difficulty {
+        font-size: 13px;
+        color: #777;
+        margin-bottom: 8px;
+    }
+
+    input {
+        width: 90%;
+        max-width: 550px;
+        padding: 12px;
+        font-size: 17px;
+        border: 1px solid #aaa;
+        border-radius: 7px;
+        margin-top: 10px;
+        box-sizing: border-box;
+    }
+
+    button {
+        padding: 10px 18px;
+        font-size: 16px;
+        border-radius: 7px;
+        border: none;
+        cursor: pointer;
+        margin-top: 12px;
+    }
+
+    .check-btn {
+        background: #172b4d;
+        color: white;
+    }
+
+    .check-btn:hover {
+        background: #263f69;
+    }
+
+    .result {
+        margin-top: 12px;
+        font-weight: bold;
+    }
+
+    .retry {
+        color: #a05a00;
+        font-size: 14px;
+        margin-top: 6px;
+    }
+
+    .solution {
+        display: none;
+        background: #f0f5ff;
+        border-left: 4px solid #315fbd;
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 6px;
+    }
+
+    .score-box {
+        display: none;
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        margin-top: 30px;
+        text-align: center;
+        border: 1px solid #ccc;
+    }
+
+    .back {
+        display: inline-block;
+        margin-top: 30px;
+        color: #4d2a91;
+        font-size: 18px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📚 Chapter 3: Polynomials</h1>
+
+    <p class="subtitle">
+        Practice Set 3.3 — Division of polynomials.
+    </p>
+
+    <hr>
+
+
+    <!-- PROBLEM 1 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🟢 Problem 1 — Easy</div>
+
+        <h2>1. Dividing a Monomial</h2>
+
+        <p>
+            Simplify:
+        </p>
+
+        <p>
+            12x<sup>4</sup> ÷ 3x
+        </p>
+
+        <input id="a1" type="text"
+               placeholder="Enter the quotient">
+
+        <br>
+
+        <button class="check-btn"
+                onclick="checkAnswer(1, '4x^3')">
+            Check Answer
+        </button>
+
+        <div class="result" id="r1"></div>
+        <div class="retry" id="retry1"></div>
+
+        <div class="solution" id="s1">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            Divide the coefficients:
+
+            <br>
+
+            12 ÷ 3 = 4
+
+            <br><br>
+
+            For the variable:
+
+            <br>
+
+            x<sup>4</sup> ÷ x = x<sup>3</sup>
+
+            <br><br>
+
+            Therefore:
+
+            <strong>4x<sup>3</sup></strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEM 2 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🟢 Problem 2 — Easy/Medium</div>
+
+        <h2>2. Dividing by a Monomial</h2>
+
+        <p>
+            Simplify:
+        </p>
+
+        <p>
+            (15x<sup>3</sup> − 10x<sup>2</sup> + 5x)
+            ÷ 5x
+        </p>
+
+        <input id="a2" type="text"
+               placeholder="Enter the simplified expression">
+
+        <br>
+
+        <button class="check-btn"
+                onclick="checkAnswer(2, '3x^2-2x+1')">
+            Check Answer
+        </button>
+
+        <div class="result" id="r2"></div>
+        <div class="retry" id="retry2"></div>
+
+        <div class="solution" id="s2">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            Divide each term by 5x:
+
+            <br><br>
+
+            15x<sup>3</sup> ÷ 5x = 3x<sup>2</sup>
+
+            <br>
+
+            −10x<sup>2</sup> ÷ 5x = −2x
+
+            <br>
+
+            5x ÷ 5x = 1
+
+            <br><br>
+
+            Therefore:
+
+            <strong>3x<sup>2</sup> − 2x + 1</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEM 3 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🟡 Problem 3 — Medium</div>
+
+        <h2>3. Quotient and Remainder</h2>
+
+        <p>
+            When:
+        </p>
+
+        <p>
+            x<sup>2</sup> + 5x + 7
+        </p>
+
+        <p>
+            is divided by x + 2, find the remainder.
+        </p>
+
+        <input id="a3" type="text"
+               placeholder="Enter the remainder">
+
+        <br>
+
+        <button class="check-btn"
+                onclick="checkAnswer(3, '1')">
+            Check Answer
+        </button>
+
+        <div class="result" id="r3"></div>
+        <div class="retry" id="retry3"></div>
+
+        <div class="solution" id="s3">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            For divisor x + 2, put:
+
+            <br>
+
+            x = −2
+
+            <br><br>
+
+            Substitute:
+
+            <br>
+
+            (−2)<sup>2</sup> + 5(−2) + 7
+
+            <br>
+
+            = 4 − 10 + 7
+
+            <br>
+
+            = 1
+
+            <br><br>
+
+            Therefore:
+
+            <strong>Remainder = 1</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEM 4 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🟠 Problem 4 — Hard</div>
+
+        <h2>4. Finding a Quotient</h2>
+
+        <p>
+            Divide:
+        </p>
+
+        <p>
+            x<sup>2</sup> + 7x + 12
+        </p>
+
+        <p>
+            by x + 3.
+        </p>
+
+        <input id="a4" type="text"
+               placeholder="Enter the quotient">
+
+        <br>
+
+        <button class="check-btn"
+                onclick="checkAnswer(4, 'x+4')">
+            Check Answer
+        </button>
+
+        <div class="result" id="r4"></div>
+        <div class="retry" id="retry4"></div>
+
+        <div class="solution" id="s4">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            We need two terms whose product gives:
+
+            <br>
+
+            x<sup>2</sup> + 7x + 12
+
+            <br><br>
+
+            Notice:
+
+            <br>
+
+            (x + 3)(x + 4)
+
+            <br>
+
+            = x<sup>2</sup> + 7x + 12
+
+            <br><br>
+
+            Therefore:
+
+            <strong>Quotient = x + 4</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- PROBLEM 5 -->
+
+    <div class="problem">
+
+        <div class="difficulty">🔴 Problem 5 — Challenge</div>
+
+        <h2>5. Division Check</h2>
+
+        <p>
+            A polynomial P(x) is divided by x − 4.
+        </p>
+
+        <p>
+            If P(4) = 9, what is the remainder?
+        </p>
+
+        <input id="a5" type="text"
+               placeholder="Enter the remainder">
+
+        <br>
+
+        <button class="check-btn"
+                onclick="checkAnswer(5, '9')">
+            Check Answer
+        </button>
+
+        <div class="result" id="r5"></div>
+        <div class="retry" id="retry5"></div>
+
+        <div class="solution" id="s5">
+
+            <strong>💡 Step-by-step solution:</strong>
+
+            <br><br>
+
+            When a polynomial P(x) is divided by x − a,
+            the remainder is P(a).
+
+            <br><br>
+
+            Here:
+
+            <br>
+
+            a = 4
+
+            <br>
+
+            P(4) = 9
+
+            <br><br>
+
+            Therefore:
+
+            <strong>Remainder = 9</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- SCORE -->
+
+    <div class="score-box" id="scoreBox">
+
+        <h2>🏆 Practice Set Complete!</h2>
+
+        <p id="scoreText"></p>
+
+        <p>
+            Polynomial division unlocked. 🔥
+        </p>
+
+    </div>
+
+
+    <a class="back" href="polynomial.html">
+        ⬅️ Back to Polynomials
+    </a>
+
+</div>
+
+
+<script>
+
+const attempts = [0, 0, 0, 0, 0];
+
+const completed = [false, false, false, false, false];
+
+let score = 0;
+
+
+function normalize(answer) {
+
+    return answer
+        .toLowerCase()
+        .trim()
+        .replace(/\s+/g, "")
+        .replace(/−/g, "-");
+}
+
+
+function checkAnswer(question, correctAnswer) {
+
+    const input = document.getElementById("a" + question);
+    const result = document.getElementById("r" + question);
+    const retry = document.getElementById("retry" + question);
+    const solution = document.getElementById("s" + question);
+
+    if (completed[question - 1]) return;
+
+    const answer = normalize(input.value);
+    const correct = normalize(correctAnswer);
+
+    if (answer === "") {
+
+        result.textContent = "⚠️ Please enter an answer first.";
+        result.style.color = "#a05a00";
+        return;
+
+    }
+
+    attempts[question - 1]++;
+
+    if (answer === correct) {
+
+        result.textContent = "✅ Correct! Great work 🔥";
+        result.style.color = "green";
+
+        solution.style.display = "block";
+
+        completed[question - 1] = true;
+
+        score++;
+
+        checkComplete();
+
+        return;
+
+    }
+
+    if (attempts[question - 1] < 3) {
+
+        const remaining = 3 - attempts[question - 1];
+
+        result.textContent = "❌ Not quite. Try again!";
+        result.style.color = "red";
+
+        retry.textContent =
+            "🔄 " +
+            remaining +
+            (remaining === 1 ? " retry" : " retries") +
+            " remaining.";
+
+        return;
+
+    }
+
+    result.textContent = "❌ No more retries.";
+    result.style.color = "red";
+
+    retry.textContent =
+        "💡 Your step-by-step solution is shown below.";
+
+    solution.style.display = "block";
+
+    completed[question - 1] = true;
+
+    checkComplete();
+
+}
+
+
+function checkComplete() {
+
+    if (!completed.every(Boolean)) return;
+
+    const scoreBox = document.getElementById("scoreBox");
+    const scoreText = document.getElementById("scoreText");
+
+    scoreBox.style.display = "block";
+
+    scoreText.innerHTML =
+        "You scored <strong>" +
+        score +
+        " / 5</strong>.";
+
+    scoreBox.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+}
+
+</script>
+
+</body>
+  </html>
