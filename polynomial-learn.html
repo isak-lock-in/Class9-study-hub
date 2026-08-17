@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Polynomials - Learn</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 20px;
+        background: #f4f7fc;
+        color: #172b4d;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 34px;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    h3 {
+        color: #315fbd;
+    }
+
+    .subtitle {
+        color: #666;
+        margin-bottom: 25px;
+    }
+
+    .topic {
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        padding: 22px;
+        margin: 20px 0;
+        box-shadow: 0 2px 7px rgba(0,0,0,0.08);
+    }
+
+    .definition {
+        background: #f0f5ff;
+        border-left: 4px solid #315fbd;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 6px;
+    }
+
+    .example {
+        background: #f8f8f8;
+        border-left: 4px solid #777;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 6px;
+    }
+
+    .formula {
+        background: #eef3ff;
+        padding: 14px;
+        border-radius: 8px;
+        margin: 12px 0;
+        font-weight: bold;
+    }
+
+    .important {
+        background: #fff8e8;
+        border-left: 4px solid #d69b00;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 6px;
+    }
+
+    .back {
+        display: inline-block;
+        margin-top: 30px;
+        color: #4d2a91;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    .nav {
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    .nav a {
+        display: inline-block;
+        margin: 5px;
+        padding: 8px 12px;
+        background: #f0f3f8;
+        color: #172b4d;
+        border-radius: 7px;
+        text-decoration: none;
+    }
+
+    .nav a:hover {
+        background: #e4ebf8;
+    }
+
+    ul {
+        padding-left: 25px;
+    }
+
+    @media (max-width: 600px) {
+        body {
+            padding: 12px;
+        }
+
+        h1 {
+            font-size: 29px;
+        }
+
+        .topic {
+            padding: 17px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>📖 Chapter 3: Polynomials</h1>
+
+    <p class="subtitle">
+        Learn the concepts step-by-step.
+    </p>
+
+    <hr>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="nav">
+
+        <strong>Chapter Navigation:</strong>
+
+        <br>
+
+        <a href="polynomial.html">
+            🏠 Polynomials
+        </a>
+
+        <a href="polynomial-important-points.html">
+            ⭐ Important Points
+        </a>
+
+        <a href="polynomial-practice-set-3.1.html">
+            📝 Practice Sets
+        </a>
+
+        <a href="polynomial-problem-set-3.html">
+            📚 Problem Set 3
+        </a>
+
+        <a href="polynomial-quiz-1.html">
+            🧠 Quiz
+        </a>
+
+    </div>
+
+
+    <!-- INTRODUCTION -->
+
+    <div class="topic">
+
+        <h2>1. What is a Polynomial?</h2>
+
+        <p>
+            A polynomial is an algebraic expression made up of
+            variables, constants and powers of variables combined
+            using addition, subtraction and multiplication.
+        </p>
+
+        <div class="definition">
+
+            <strong>📌 Definition:</strong>
+
+            <br><br>
+
+            An expression of the form
+
+            <br><br>
+
+            <strong>
+                a₀ + a₁x + a₂x² + a₃x³ + ... + aₙxⁿ
+            </strong>
+
+            <br><br>
+
+            is a polynomial in the variable x, where the
+            coefficients are real numbers and the powers are
+            non-negative integers.
+
+        </div>
+
+        <div class="example">
+
+            <strong>Example:</strong>
+
+            <br><br>
+
+            3x² + 5x − 7
+
+            <br><br>
+
+            This is a polynomial in x.
+
+        </div>
+
+    </div>
+
+
+    <!-- TERMS -->
+
+    <div class="topic">
+
+        <h2>2. Terms, Coefficients and Constants</h2>
+
+        <p>
+            A polynomial is made up of terms.
+            Each term may contain a coefficient and a variable.
+        </p>
+
+        <div class="example">
+
+            Consider:
+
+            <br><br>
+
+            <strong>5x³ − 2x² + 7x − 9</strong>
+
+            <br><br>
+
+            The terms are:
+
+            <ul>
+                <li>5x³</li>
+                <li>−2x²</li>
+                <li>7x</li>
+                <li>−9</li>
+            </ul>
+
+            The numerical factors 5, −2 and 7 are
+            coefficients.
+
+            <br><br>
+
+            −9 is a constant term.
+
+        </div>
+
+    </div>
+
+
+    <!-- DEGREE -->
+
+    <div class="topic">
+
+        <h2>3. Degree of a Polynomial</h2>
+
+        <p>
+            The degree of a polynomial is the highest power of
+            the variable having a non-zero coefficient.
+        </p>
+
+        <div class="example">
+
+            For:
+
+            <br><br>
+
+            <strong>
+                4x⁵ + 2x³ − 7x + 8
+            </strong>
+
+            <br><br>
+
+            The highest power of x is 5.
+
+            <br><br>
+
+            Therefore:
+
+            <strong>Degree = 5</strong>
+
+        </div>
+
+        <div class="important">
+
+            ⭐ <strong>Remember:</strong>
+
+            <br><br>
+
+            Look for the highest exponent of the variable.
+
+        </div>
+
+    </div>
+
+
+    <!-- TYPES -->
+
+    <div class="topic">
+
+        <h2>4. Types of Polynomials</h2>
+
+        <p>
+            Polynomials can be classified according to the number
+            of terms they contain.
+        </p>
+
+        <h3>Monomial</h3>
+
+        <p>
+            A polynomial having one term is called a monomial.
+        </p>
+
+        <div class="example">
+            Examples:
+            <br><br>
+            5x, 7x², 9
+        </div>
+
+
+        <h3>Binomial</h3>
+
+        <p>
+            A polynomial having two unlike terms is called a
+            binomial.
+        </p>
+
+        <div class="example">
+            Examples:
+            <br><br>
+            x + 5
+            <br>
+            3x² − 7
+        </div>
+
+
+        <h3>Trinomial</h3>
+
+        <p>
+            A polynomial having three unlike terms is called a
+            trinomial.
+        </p>
+
+        <div class="example">
+            Examples:
+            <br><br>
+            x² + 3x + 2
+            <br>
+            2x³ − x + 5
+        </div>
+
+    </div>
+
+
+    <!-- CONSTANT POLYNOMIAL -->
+
+    <div class="topic">
+
+        <h2>5. Constant Polynomial</h2>
+
+        <p>
+            A polynomial containing only a constant term is
+            called a constant polynomial.
+        </p>
+
+        <div class="example">
+
+            Examples:
+
+            <br><br>
+
+            5, −3, 12, 0
+
+        </div>
+
+        <div class="important">
+
+            ⭐ A non-zero constant polynomial has degree 0.
+
+        </div>
+
+    </div>
+
+
+    <!-- ZERO POLYNOMIAL -->
+
+    <div class="topic">
+
+        <h2>6. Zero Polynomial</h2>
+
+        <p>
+            A polynomial in which all coefficients are zero is
+            called the zero polynomial.
+        </p>
+
+        <div class="example">
+
+            <strong>0</strong>
+
+        </div>
+
+        <div class="important">
+
+            ⭐ The degree of the zero polynomial is not defined.
+
+        </div>
+
+    </div>
+
+
+    <!-- VALUE -->
+
+    <div class="topic">
+
+        <h2>7. Value of a Polynomial</h2>
+
+        <p>
+            To find the value of a polynomial for a particular
+            value of the variable, substitute that value for the
+            variable and simplify.
+        </p>
+
+        <div class="example">
+
+            Let:
+
+            <br><br>
+
+            <strong>
+                p(x) = x² + 3x + 2
+            </strong>
+
+            <br><br>
+
+            Find p(2).
+
+            <br><br>
+
+            Substitute x = 2:
+
+            <br><br>
+
+            p(2) = 2² + 3(2) + 2
+
+            <br><br>
+
+            = 4 + 6 + 2
+
+            <br><br>
+
+            = <strong>12</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- ZERO OF POLYNOMIAL -->
+
+    <div class="topic">
+
+        <h2>8. Zero of a Polynomial</h2>
+
+        <p>
+            A number a is called a zero of a polynomial p(x)
+            if p(a) = 0.
+        </p>
+
+        <div class="formula">
+
+            p(a) = 0 → a is a zero of p(x)
+
+        </div>
+
+        <div class="example">
+
+            Consider:
+
+            <br><br>
+
+            p(x) = x − 5
+
+            <br><br>
+
+            Put x = 5:
+
+            <br><br>
+
+            p(5) = 5 − 5 = 0
+
+            <br><br>
+
+            Therefore:
+
+            <strong>5 is a zero of p(x).</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- OPERATIONS -->
+
+    <div class="topic">
+
+        <h2>9. Operations on Polynomials</h2>
+
+        <p>
+            Polynomials can be added, subtracted and multiplied
+            by using algebraic rules.
+        </p>
+
+
+        <h3>Addition</h3>
+
+        <div class="example">
+
+            (3x + 5) + (2x + 7)
+
+            <br><br>
+
+            = 3x + 2x + 5 + 7
+
+            <br><br>
+
+            = <strong>5x + 12</strong>
+
+        </div>
+
+
+        <h3>Subtraction</h3>
+
+        <div class="example">
+
+            (5x + 8) − (2x + 3)
+
+            <br><br>
+
+            = 5x + 8 − 2x − 3
+
+            <br><br>
+
+            = <strong>3x + 5</strong>
+
+        </div>
+
+
+        <h3>Multiplication</h3>
+
+        <div class="example">
+
+            2x(x + 3)
+
+            <br><br>
+
+            = 2x² + 6x
+
+        </div>
+
+    </div>
+
+
+    <!-- IDENTITIES -->
+
+    <div class="topic">
+
+        <h2>10. Important Algebraic Identities</h2>
+
+        <p>
+            These identities are useful when expanding and
+            factorising polynomial expressions.
+        </p>
+
+        <div class="formula">
+
+            (a + b)² = a² + 2ab + b²
+
+        </div>
+
+        <div class="formula">
+
+            (a − b)² = a² − 2ab + b²
+
+        </div>
+
+        <div class="formula">
+
+            (a + b)(a − b) = a² − b²
+
+        </div>
+
+        <div class="formula">
+
+            (x + a)(x + b)
+            = x² + (a + b)x + ab
+
+        </div>
+
+        <div class="important">
+
+            ⭐ Learn these identities carefully.
+            They are used repeatedly in polynomial
+            simplification and factorisation.
+
+        </div>
+
+    </div>
+
+
+    <!-- FACTORISATION -->
+
+    <div class="topic">
+
+        <h2>11. Factorisation</h2>
+
+        <p>
+            Factorisation means expressing an algebraic expression
+            as a product of its factors.
+        </p>
+
+        <div class="example">
+
+            Consider:
+
+            <br><br>
+
+            x² + 5x + 6
+
+            <br><br>
+
+            We need two numbers whose product is 6 and whose sum
+            is 5.
+
+            <br><br>
+
+            The numbers are 2 and 3.
+
+            <br><br>
+
+            Therefore:
+
+            <br><br>
+
+            <strong>
+                x² + 5x + 6
+                = (x + 2)(x + 3)
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- REMAINDER THEOREM -->
+
+    <div class="topic">
+
+        <h2>12. Remainder Theorem</h2>
+
+        <p>
+            When a polynomial p(x) is divided by x − a,
+            the remainder is p(a).
+        </p>
+
+        <div class="formula">
+
+            Remainder = p(a)
+
+        </div>
+
+        <div class="example">
+
+            Let:
+
+            <br><br>
+
+            p(x) = x² + 3x + 2
+
+            <br><br>
+
+            When divided by x − 1:
+
+            <br><br>
+
+            Remainder = p(1)
+
+            <br><br>
+
+            = 1² + 3(1) + 2
+
+            <br><br>
+
+            = <strong>6</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- FACTOR THEOREM -->
+
+    <div class="topic">
+
+        <h2>13. Factor Theorem</h2>
+
+        <p>
+            If p(a) = 0, then x − a is a factor of p(x).
+        </p>
+
+        <div class="formula">
+
+            p(a) = 0
+            ⇔
+            (x − a) is a factor of p(x)
+
+        </div>
+
+        <div class="example">
+
+            Let:
+
+            <br><br>
+
+            p(x) = x² − 5x + 6
+
+            <br><br>
+
+            Check x − 2:
+
+            <br><br>
+
+            p(2) = 4 − 10 + 6
+
+            <br><br>
+
+            = 0
+
+            <br><br>
+
+            Therefore:
+
+            <strong>x − 2 is a factor.</strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUICK RECAP -->
+
+    <div class="topic">
+
+        <h2>🧠 Quick Recap</h2>
+
+        <ul>
+
+            <li>
+                A polynomial contains variables with
+                non-negative integer powers.
+            </li>
+
+            <li>
+                The highest power gives the degree.
+            </li>
+
+            <li>
+                One term → monomial.
+            </li>
+
+            <li>
+                Two terms → binomial.
+            </li>
+
+            <li>
+                Three terms → trinomial.
+            </li>
+
+            <li>
+                p(a) = 0 means a is a zero of p(x).
+            </li>
+
+            <li>
+                Remainder when dividing by x − a is p(a).
+            </li>
+
+            <li>
+                If p(a) = 0, x − a is a factor.
+            </li>
+
+            <li>
+                Algebraic identities help with expansion
+                and factorisation.
+            </li>
+
+        </ul>
+
+        <div class="important">
+
+            🔥 <strong>You're ready for the Important Points section.</strong>
+
+            <br><br>
+
+            Once you've understood this page, move on to
+            the Important Points before starting the practice sets.
+
+        </div>
+
+    </div>
+
+
+    <!-- BACK -->
+
+    <a
+        class="back"
+        href="polynomial.html"
+    >
+        ⬅️ Back to Polynomials
+    </a>
+
+</div>
+
+</body>
+  </html>
